@@ -5,10 +5,10 @@ import os.path as osp
 import pandas as pd
 from parse import parse
 
-csv_path = "/home/sunhuibo/下载/nullmax_lane_log.csv"
-output_json_dir = "/home/sunhuibo/下载/wukong_out_json/"
+csv_path = "/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/0801_chery_HDmap_results/nullmax_lane_log.csv"
+output_json_dir = "/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/0801_chery_HDmap_results/nullmax_lane_json"
 os.makedirs(output_json_dir, exist_ok=True)
-odom_path = "/media/sunhuibo/data/Work/data/0907/update_vehicle.log"
+odom_path = "/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/dst/vehicle.log"
 odom_info = {}
 
 pd_reader = pd.read_csv(csv_path)
@@ -47,7 +47,7 @@ for key in lane_data:
         json_data["odometry"] = {
             "x": float(odom["x"]),
             "y": float(odom["y"]),
-            "z": float(odom["z"]),
+            "z": 0,
             "theta": float(odom["theta"])
         }
     for lane in lane_data[key]:

@@ -65,12 +65,13 @@ for root, files in walk(src):
         img = cv2.imread(file_)
         img_crop = img[480:0,320:1600]
         dst_file = file_.replace(src,dst)
-        dst_path = os.path.dirname(dst_file)        
+        dst_path = os.path.dirname(dst_file)       
         print(dst_path)
         if not os.path.exists(dst_path):
             os.makedirs(dst_path)
         print(dst_file)
         cv2.imwrite(dst_file, img_crop,)
+
 
 
 

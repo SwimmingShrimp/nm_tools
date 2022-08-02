@@ -4,8 +4,8 @@ import sys
 sys.path.append("..")
 import utils
 
-json_src = '/home/NULLMAX/lixialin/视频/day.json'
-json_dst = '/home/NULLMAX/lixialin/视频/day1.json'
+json_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/label_json/day/day.json'
+json_dst = '/home/lixialin/Pictures/day.json'
 
 json_data = utils.get_json_data(json_src)
 for temp in json_data:
