@@ -3,19 +3,10 @@ import os
 import argparse
 
 
-# path_video_output ='./result.mp4'
-# fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-# video_writer = cv2.VideoWriter(filename=path_video_output, fourcc=fourcc, fps=15, frameSize=(1920, 1280))
-# for i in range(76,94):
-#     if os.path.exists('/home/songbing/Documents/Pycharm_project/lane_detect_color/or/frame_vc2_'+str(i)+'.png'):  #判断图片是否存在
-#         img = cv2.imread(filename='/home/songbing/Documents/Pycharm_project/lane_detect_color/or/frame_vc2_'+str(i)+'.png')
-#         cv2.imshow('001',img)
-#         cv2.waitKey(100)
-#         video_writer.write(img)
-#         #print(str(i) + '.jpg' + ' done!')
-# video_writer.release()
-
-'''使用说明：需要配置图片所在文件夹的路径，另外还需要配置视频保存的文件夹路径/视频名称'''
+'''
+使用说明：需要配置图片所在文件夹的路径，另外还需要配置视频保存的文件夹路径/视频名称
+注意：需要修改压缩图片的分辨率
+'''
 
 def main():
     parser = argparse.ArgumentParser()
@@ -24,13 +15,15 @@ def main():
     args = parser.parse_args()
 
     fourcc = cv2.VideoWriter.fourcc(*'MP4V')
-    video_writer = cv2.VideoWriter(filename=args.path_output, fourcc=fourcc, fps=30, frameSize=(4996, 2560))
+    video_writer = cv2.VideoWriter(filename=args.path_output, fourcc=fourcc, fps=5, frameSize=(1920, 1080))
 
     for (root,_,pics) in os.walk(args.folder_pic):   #pics为列表,而且列表内的元素是无序的
         if len(pics) != 0:
-           pics.sort(key=lambda x: (x.rsplit('_')[-1].split('.')[0]))   #经过这步处理，此时pics已经是内部有序的列表
+           pics.sort(key=lambda x: int(x.rsplit('_')[-1].split('.')[0]))   #经过这步处理，此时pics已经是内部有序的列表
+           print(pics)
            #pics.sort(key=lambda x: int(x.split('.')[0]))
            for pic in pics :
+               print(pic)
                path_pic = os.path.join(root,pic)
                img = cv2.imread(path_pic)
                cv2.namedWindow('image',flags=cv2.WINDOW_NORMAL)
@@ -39,8 +32,8 @@ def main():
                cv2.waitKey(100)
                video_writer.write(img)
                #print(str(i) + '.jpg' + ' done!')
-    video_writer.release()
-    cv2.destroyAllWindows()
+    # video_writer.release()
+    # cv2.destroyAllWindows()
 
 if __name__ == '__main__':
     main()

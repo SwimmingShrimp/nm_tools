@@ -2,7 +2,7 @@
 import os
 import json
 
-json_src = 'E:/DATASET_json/3d_side_day/case1_2_3D激光数据外部标注'
+json_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/0_temp/3d_outlable'
 # json_files = os.listdir(json_src)
 json_files =[]
 for root,dirs, files in os.walk(json_src):
@@ -22,11 +22,11 @@ for json_file in json_files:
         json_data = json.load(f)
     items = json_data["frames"][0]["items"]
     for item in items:
-        obstacle_type = item["category"]
+        obstacle_type = (item["category"]).lower()
         print(obstacle_type)
         if obstacle_type=='truck':
             truck +=1
-        if obstacle_type=='Car':
+        if obstacle_type=='car':
             car +=1
         if obstacle_type=='bus':
             bus +=1
