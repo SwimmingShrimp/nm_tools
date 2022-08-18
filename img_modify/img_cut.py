@@ -10,8 +10,8 @@ import glob
 from pathlib import Path
 import re
 
-src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/data/cherry_fish_playback'
-dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/data/chery_fish_1280X800'
+src = '/media/lixialin/lxl/0_temp/data/2022-01-12-14-54/0_10000/5001-10000/FOV120_dist'
+dst = '/media/lixialin/lxl/0_temp/data/2022-01-12-14-54/0_10000/5001-10000/FOV120_dist'
 
 imgtypes = ['.jpg', '.bmp', '.png', '.yuv']
 def usort(fnames):
@@ -62,15 +62,17 @@ def walk(p, regex='**/*'):
 
 for root, files in walk(src):
     for file_ in files:
+        print(file_)
         img = cv2.imread(file_)
-        img_crop = img[480:0,320:1600]
-        dst_file = file_.replace(src,dst)
-        dst_path = os.path.dirname(dst_file)       
-        print(dst_path)
-        if not os.path.exists(dst_path):
-            os.makedirs(dst_path)
-        print(dst_file)
-        cv2.imwrite(dst_file, img_crop,)
+        # y*x
+        img_crop = img[200:1280,0:1920]
+        # dst_file = file_.replace(src,dst)
+        # dst_path = os.path.dirname(dst_file)       
+        # print(dst_path)
+        # if not os.path.exists(dst_path):
+        #     os.makedirs(dst_path)
+        # print(dst_file)
+        cv2.imwrite(file_, img_crop,)
 
 
 

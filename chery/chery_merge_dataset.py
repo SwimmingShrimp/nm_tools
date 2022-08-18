@@ -3,11 +3,11 @@ sys.path.append("..")
 import utils
 import os
 
-src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/640x384_bmp_2'
+src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/640x384_bmp2'
 dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/640x384_rename_bmp/FOV120'
-txtfile = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/relation2.txt'
+txtfile = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/relation.txt'
 
-idx = 2237
+idx = 1463
 os.makedirs(dst,exist_ok=True)
 with open(txtfile,'a+') as f:
     for root, files in utils.walk(src):

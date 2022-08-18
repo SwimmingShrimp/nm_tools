@@ -27,41 +27,30 @@ def change_json():
             data_3d = json_data["frames"][0]["items"]
             data_2d = json_data["frames"][0]["images"][0]["items"]
             json_3d = []
-            json_2d = []
             for temp_3d in data_3d:
                 type_3d = (temp_3d["category"]).lower()
-                type_value_3d = config.front_config["enum_obstacle2"][type_3d]
+                # type_value_3d = config.front_config["enum_obstacle2"][type_3d]
                 dimension = temp_3d["dimension"]
                 orientation = temp_3d["rotation"]
                 position = temp_3d["position"]
                 id = temp_3d["id"]
+                match_2d_data = [x for x in data_2d if x["id"]==id]
+                box_2d = {
+                    "x":match_2d_data[0]["position"]["x"],
+                    "y":match_2d_data[0]["position"]["y"],
+                    "w":match_2d_data[0]["dimension"]["x"],
+                    "h":match_2d_data[0]["dimension"]["y"]
+                }
                 temp = {
                     "id":id,
-                    "type":type_value_3d,
+                    "type":type_3d,
                     "dimension":dimension,
                     "orientation":orientation,
-                    "position":position
+                    "position":position,
+                    "box_2d":box_2d
                 }
                 json_3d.append(temp)
-            for temp_2d in data_2d:
-                type_2d = (temp_2d["category"]).lower()
-                type_value_2d = config.front_config["enum_obstacle2"][type_2d]
-                box_2d = {
-                    "x":temp_2d["position"]["x"],
-                    "y":temp_2d["position"]["y"],
-                    "w":temp_2d["dimension"]["x"],
-                    "h":temp_2d["dimension"]["y"]
-                }
-                temp = {
-                    "type":type_value_2d,
-                    "box":box_2d
-                }
-                json_2d.append(temp)
-            new_json_data = {
-                "2d":json_2d,
-                "3d":json_3d
-            }
-            utils.write_json_data(os.path.join(json_dst,file_),new_json_data)
+            utils.write_json_data(os.path.join(json_dst,file_),json_3d)
 
 '''根据id信息，算出速度和加速度'''
 def calc_vel_accel():
@@ -73,8 +62,8 @@ def calc_vel_accel():
             json_data2 = utils.get_json_data(os.path.join(root,files[i+1]))
             if int(files[i].split('.')[0])+1 == int(files[i+1].split('.')[0]):
                 if  int(files[i].split('.')[0])-1 == int(files[i-1].split('.')[0]):
-                    for temp1 in json_data1['3d']:
-                        temp2 = [x for x in json_data2['3d'] if x["id"]==temp1["id"]]
+                    for temp1 in json_data1:
+                        temp2 = [x for x in json_data2 if x["id"]==temp1["id"]]
                         if not temp2:
                             continue
                         else:
@@ -91,11 +80,11 @@ def calc_vel_accel():
                         }
                     utils.write_json_data(os.path.join(json_dst2,files[i+1]),json_data2)   
                 else:
-                    for temp in json_data1['3d']:
+                    for temp in json_data1:
                         temp['velocity']= {"x": -1000, "y": -1000, "z": -1000}
                         temp['accel']= {"x": -1000, "y": -1000, "z": -1000}
-                    for temp1 in json_data1['3d']:
-                        temp2 = [x for x in json_data2['3d'] if x["id"]==temp1["id"]]
+                    for temp1 in json_data1:
+                        temp2 = [x for x in json_data2 if x["id"]==temp1["id"]]
                         if not temp2:
                             continue
                         else:

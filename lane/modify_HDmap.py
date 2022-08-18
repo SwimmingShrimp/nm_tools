@@ -6,7 +6,7 @@ import utils
 import os
 
 
-txtfile = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/relation2.txt'
+txtfile = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/relation.txt'
 dict1 = {}
 with open(txtfile,'r') as f:
     for line in f.readlines():

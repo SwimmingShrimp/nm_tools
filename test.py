@@ -4,12 +4,17 @@ import utils
 import os
 
 
-src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/0_temp/3d_interlable'
-
-for root,_,files in os.walk(src):
+src = '/media/lixialin/boot/lixialin/data2/front_3d_1920x1280_yuv_599/front_near'
+for root, files in utils.walk(src):
     for file_ in files:
-        if 'FOV30' in root:
-            newfilename = file_.replace('vc1','vc2')
-        if 'FOV120' in root:
-            newfilename = file_.replace('vc2','vc1')
-        os.system('mv {} {}'.format(os.path.join(root,file_),os.path.join(root,newfilename)))
+        num = os.path.basename(file_).split('_')[-1].split('.')[0]
+        print(num)
+        if int(num)<10:
+            newfile= 'frame_vc1_0' + num + '.yuv'
+            os.system('mv {} {}/{}'.format(file_,root,newfile))
+
+# src = '/home/lixialin/Pictures/2/FOV30'
+# for root,_ ,files in os.walk(src):
+#     for file_ in files:
+#         newfile = file_.replace('vc1','vc2')
+#         os.system('mv {}/{} {}/{}'.format(root,file_,root,newfile))
