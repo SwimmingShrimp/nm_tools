@@ -4,7 +4,7 @@ import utils
 import os
 
 
-src = '/media/lixialin/boot/lixialin/data2/front_3d_1920x1280_yuv_599/front_near'
+src = '/media/lixialin/boot/lixialin/data2/HDmap_1920x1280_yuv_4644/front_near'
 for root, files in utils.walk(src):
     for file_ in files:
         num = os.path.basename(file_).split('_')[-1].split('.')[0]

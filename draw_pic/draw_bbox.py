@@ -24,14 +24,14 @@ import json
 
 
 # '''draw perce json,(x,y)左上角点'''
-json_src = '/home/lixialin/Videos/3/sensor_camera_config/scripts/image_record/image_record_json/front_far/frame_vc2_11.json'
-img_src = '/media/lixialin/lxl/1_dataset/chery_2d_front_day/1920x1080_png/FOV30/frame_vc2_11.png'
+json_src = '/home/lixialin/Music/front_2d_night/image_record_json/camera_fusion/0068.json'
+img_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/night/1920x1080_png/FOV30/frame_vc2_68.png'
 
 with open(json_src,'r') as f:
     json_data = json.load(f)
 img = cv2.imread(img_src)
 proportion = 3
-for each in json_data["tracks"]:
+for each in json_data[0]["front_far"]["tracks"]:
     echo_value = each["uv_bbox2d"]
     h = int(echo_value["obstacle_bbox.height"]*proportion)
     w = int(echo_value["obstacle_bbox.width"]*proportion)

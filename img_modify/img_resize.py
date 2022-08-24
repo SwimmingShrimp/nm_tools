@@ -17,7 +17,7 @@ for root,files in utils.walk(src):
         # img = img[90:1242,0:1920]
         # img = cv2.resize(img, (640, 384))
         img = cv2.resize(img, (1920, 1152))
-        img = cv2.copyMakeBorder(img, 90, 38, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))        
+        img = cv2.copyMakeBorder(img, 40, 88, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))        
         img_path = dst + '/' + basename
         # print(img_path)
         cv2.imwrite(img_path,img,)

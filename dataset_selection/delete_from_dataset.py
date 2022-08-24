@@ -54,7 +54,8 @@ def walk(p, regex='**/*'):
     return walks
 
 
-img_src = '/data1/NMtest/CornerCaseAndPseudoGT/JIRA/chery_front_120_30_jira/FAULT-1339/input/case1/FOV30'
+img_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/tools/kpi_eval_tool/2022-08-22-20-40-45/err_pic/errdet'
+dst = '/home/lixialin/Music/json_modify'
 
 for root, files in walk(img_src):
     pass
@@ -71,7 +72,7 @@ while True:
     elif key == ord('b'):
         idx -= 1
     elif key == ord('d'):
-        os.system('rm {}'.format(files[idx]))
+        os.system('cp {} {}'.format(files[idx],dst))
         print('the delete file name is ',files[idx])
         idx +=1
     elif key == ord('1'):
