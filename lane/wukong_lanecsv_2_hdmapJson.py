@@ -5,10 +5,10 @@ import os.path as osp
 import pandas as pd
 from parse import parse
 
-csv_path = "/home/lixialin/Music/HDmap/nullmax_lane_log.csv"
-output_json_dir = "/home/lixialin/Music/HDmap/nullmax_lane_json"
+csv_path = "/home/lixialin/Videos/HDmap/scripts/nullmax_lane_log.csv"
+output_json_dir = "/home/lixialin/Videos/HDmap/scripts/nullmax_lane_json"
 os.makedirs(output_json_dir, exist_ok=True)
-odom_path = "/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/data/dst/vehicle.log"
+odom_path = "/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/HDmap/rename_data/vehicle_state.log"
 odom_info = {}
 
 pd_reader = pd.read_csv(csv_path)

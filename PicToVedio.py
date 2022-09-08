@@ -15,7 +15,7 @@ def main():
     args = parser.parse_args()
 
     fourcc = cv2.VideoWriter.fourcc(*'MP4V')
-    video_writer = cv2.VideoWriter(filename=args.path_output, fourcc=fourcc, fps=7, frameSize=(844, 768))
+    video_writer = cv2.VideoWriter(filename=args.path_output, fourcc=fourcc, fps=2, frameSize=(1920, 1080))
 
     for (root,_,pics) in os.walk(args.folder_pic):   #pics为列表,而且列表内的元素是无序的
         if len(pics) != 0:

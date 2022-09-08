@@ -3,9 +3,15 @@ import sys
 sys.path.append('..')
 import utils
 import cv2
+import argparse
 
-src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/3D/1920x1080_png'
-dst ='/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/3D/1920x1280_png'
+parser = argparse.ArgumentParser()
+parser.add_argument('src', type=str,help='the position of the src picture')
+parser.add_argument('dst',type=str,help='the position of the dst picture')
+args = parser.parse_args()
+
+src = args.src
+dst = args.dst
 os.makedirs(dst,exist_ok=True)
 
 for root,files in utils.walk(src):
@@ -15,5 +21,4 @@ for root,files in utils.walk(src):
         print(file_)
         os.makedirs(os.path.dirname(file_),exist_ok=True)
         img = cv2.copyMakeBorder(img, 200, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
-        # img_crop = img[150:1230, 0:1920]
         cv2.imwrite(file_,img,)
