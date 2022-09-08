@@ -1,9 +1,14 @@
 # coding = 'utf-8'
 import os
 import json
+import argparse
 
-json_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/0_temp/3d_outlable'
-# json_files = os.listdir(json_src)
+parser = argparse.ArgumentParser()
+parser.add_argument('src', type=str,help='the position of the src picture')
+args = parser.parse_args()
+
+json_src = args.src
+
 json_files =[]
 for root,dirs, files in os.walk(json_src):
     for temp in files:

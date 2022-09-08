@@ -20,5 +20,6 @@ for root,files in utils.walk(src):
         file_= file_.replace(src,dst)
         print(file_)
         os.makedirs(os.path.dirname(file_),exist_ok=True)
+        # cv2.copyMakeBorder(src,top,bottom,left,right,borderType,value)
         img = cv2.copyMakeBorder(img, 200, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
         cv2.imwrite(file_,img,)

@@ -26,14 +26,9 @@ for root, _, files in os.walk(src):
             if ind<10:
                 continue
             fpath = dst / Path(root).relative_to(src)
-            # fpath2 = dst2 / Path(root).relative_to(src)
             if not os.path.exists(fpath):
                 os.makedirs(fpath)
             # 把挑选出来的图片放到目标文件夹下
             os.system("cp {} {}".format(os.path.join(root, files[ind]), fpath))
 
-
-            # 把符合条件的图片及前30张都放到目标文件夹下
-            # for i in range(30):
-            #     os.system("cp {} {}".format(os.path.join(root, files[ind+5-i]), fpath))
 

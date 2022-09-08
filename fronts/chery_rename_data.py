@@ -2,13 +2,23 @@ import sys
 sys.path.append("..")
 import utils
 import os
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('src', type=str,help='the position of the src picture')
+parser.add_argument('dst', type=str,help='the position of the dst picture')
+args = parser.parse_args()
+
+src = args.src
+dst = args.dst
 
 idx1,idx2 = 0,0
-dst1 = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/DataSet/Qirui/TL/tl_1920x1280_png/FOV30'
-dst2 = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/DataSet/Qirui/TL/tl_1920x1280_png/FOV120'
+
+dst1 = os.path.join(dst,'FOV30')
+dst2 = os.path.join(dst,'FOV120')
 os.makedirs(dst1,exist_ok=True)
 os.makedirs(dst2,exist_ok=True)
-for root,files in utils.walk('/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/DataSet/Qirui/TL/tl_1920x1080_png'):
+for root,files in utils.walk(src):
     for file_ in files:
         filename = os.path.basename(file_)
         if 'FOV30' in root:

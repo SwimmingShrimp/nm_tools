@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 import utils
 
+'''为了防止卡顿，可以只记录需要保存的图片路径+图片名称'''
 argparser = argparse.ArgumentParser()
 argparser.add_argument('srcpath',type=str)
 argparser.add_argument('dstpath',type=str)
