@@ -26,6 +26,7 @@ import os
 
 json_data = utils.get_json_data('/home/lixialin/Downloads/json/night/night.json')
 dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/1_json/chery/2d_lable_merge/night_rename/night.json'
+new_json = []
 for temp in json_data:
     new_temp = temp
     with open('/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/new_night/relation_night.txt','r') as f:
@@ -34,7 +35,8 @@ for temp in json_data:
             num = int(oldname.split('.')[0].split('_')[-1])
             if num <290:
                 continue
-            newname = line.split('|')[-1]
+            newname = line.split('|')[-1][:-1]
             if temp["filename"] == oldname:
                 temp["filename"] = newname
-utils.write_json_data(dst,json_data)
+                new_json.append(temp)
+utils.write_json_data(dst,new_json)

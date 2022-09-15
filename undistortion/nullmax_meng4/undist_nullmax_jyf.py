@@ -333,6 +333,8 @@ if __name__ == '__main__':
     # for _, dirpath, fpaths in walk(args.imgpath, regex=args.regex):
     for root, dirpath, fpaths in os.walk(args.imgpath):
         for fpath in fpaths:
+            if '2022-07-20-09-38' not in root:
+                continue
             ocam_file = os.path.join(intrinsic_path, 'fc120', 'ocam_intrinsics.txt')
             ocam = OcamCamera(ocam_file)
             fpath_ = os.path.join(root,fpath)

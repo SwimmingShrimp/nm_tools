@@ -3,97 +3,108 @@ import sys
 sys.path.append("..")
 import utils
 
-src = '/data1/NMtest/others/DataChoice/NullMax/3D/lable_2022-01-12-14-54/FOV30'
-relation_txtfile = '/data1/NMtest/others/DataChoice/NullMax/3D/ori_2022-01-12-14-54/relation.txt'
-timestamp_file = '/data1/Unlabeled/testset/NullMax/FrontCam/fov_120/2022-01-12/2022-01-12-14-54/config/timestamp_vc2.log'
-pcd_file = '/data1/Unlabeled/testset/NullMax/FrontCam/fov_120/2022-01-12/2022-01-12-14-54/config/radar'
-newpcd_filepath1 = '/data1/NMtest/others/DataChoice/NullMax/3D/pcd_2022-01-12-14-54/ori'
-newpcd_filepath2 = '/data1/NMtest/others/DataChoice/NullMax/3D/pcd_2022-01-12-14-54/rename'
-pcd_filetxt ='/data1/NMtest/others/DataChoice/NullMax/3D/pcd_2022-01-12-14-54/pcd.txt'
-if not os.path.exists(newpcd_filepath1): 
-    os.makedirs(newpcd_filepath1)
-if not os.path.exists(newpcd_filepath2): 
-    os.makedirs(newpcd_filepath2)
+img_path = '/data/NMtest/others/DataChoice/NullMax/3D/batch2/ori'
+pcd_path1 = '/data/Unlabeled/testset/NullMax/FrontCam/fov_120'
+pcd_path2 = '/data/Unlabeled/trainset/NullMax/FrontCam/fov_120'
+pcd_file = '/data/NMtest/others/DataChoice/NullMax/3D/batch2/ori/pcd.txt'
+relation_txtfile = '/data/NMtest/others/DataChoice/NullMax/3D/batch2/ori/relation.txt'
+pcd_dst = '/data/NMtest/others/DataChoice/NullMax/3D/batch2/merge/lable/pcd'
+lable_path ='/data/NMtest/others/DataChoice/NullMax/3D/batch2/merge/lable/FOV30'
 
-'''获取pcd.txt'''
-# src = '/data1/Unlabeled/testset/NullMax/FrontCam/fov_120/2022-01-12/2022-01-12-14-54/config/radar'
-# pcd_file = '/data1/NMtest/others/DataChoice/NullMax/3D/pcd_2022-01-12-14-54/pcd.txt'
-# with open(pcd_file,'a+') as f:
-#     for root,files in utils.walk(src):
-#         for file_ in files:
-#             file_ = os.path.basename(file_)
-#             comment = file_ + '\n'
-#             f.write(comment)
+def get_lable_list():
+    for root,_,files in os.walk(lable_path):
+        pass
+    return files
+        
+def depend_inttime_get_pcdname(new_pcd_path,int_time):
+    mindiff = 1000000
+    pcdname = '1.pcd'
+    for root,files in utils.walk(new_pcd_path):
+        for file_ in files:
+            filename = os.path.basename(file_)
+            filenum1 = int(filename.rsplit('.')[0])
+            filenum2 = int(filename.rsplit('.')[1])
+            filenum = int((filenum1)*1000000 + filenum2/1000)
+            if mindiff>abs(filenum-int_time):
+                mindiff = abs(filenum-int_time)
+                pcdname = filename
+    print(pcdname)
+    return pcdname
 
-'''新frameid：老frameid'''
-dict1 = {}
-with open(relation_txtfile,'r') as f:
-    for line in f.readlines():
-        valuex = (((line.split("|")[0]).split("/")[-1]).split('.')[0]).split('_')[-1]
-        keyx = ((line.split("|")[-1]).split('.')[0]).split('_')[-1]
-        dict1[keyx] = valuex
 
-'''pic列表'''
-num_list = []
-ori_num_list = []
-for root,_,files in os.walk(src):
-    for file_ in files:
-        filenum = file_[10:-4]
-        num_list.append(filenum)
-for temp in num_list:
-    ori_num = int(dict1[temp])
-    ori_num_list.append(ori_num)
+def get_newfile_name(file_):
+    with open(relation_txtfile,'r') as f1:
+        for line in f1.readlines():
+            oldfile = line.split("|")[0]
+            if file_ == oldfile:
+                newfilename =line.split("|")[-1][:-1]
+                return newfilename
 
-'''
-pic列表对应的时间戳字典
-字典格式key:vlaue
-时间戳:老frameid
-'''
-int_time_list ={}
-with open(timestamp_file,'r') as f:
-    for timestamp_line in f.readlines():
-        frameid = timestamp_line.split(' ')[-1]
-        if int(frameid) in ori_num_list:
-            int_time = int(timestamp_line.split(' ')[-4])
-            int_time_list[int_time] = int(frameid)
+def get_timestamp(filenum,timestamp):
+    with open(timestamp,'r') as f:
+        for timestamp_line in f.readlines():
+            frameid = timestamp_line.split(' ')[-1]
+            if int(frameid) == int(filenum):
+                int_time = int(timestamp_line.split(' ')[-4])
+    return int_time
 
-'''老frameid：新frameid'''
-dict2 = {}
-with open(relation_txtfile,'r') as f:
-    for line in f.readlines():
-        keyx = (((line.split("|")[0]).split("/")[-1]).split('.')[0]).split('_')[-1]
-        valuex= ((line.split("|")[-1]).split('.')[0]).split('_')[-1]
-        dict2[keyx] = valuex
 
-'''
-获取pic列表对应的pcd文件，并修改成最新的frameid名称
-'''
-pcd_relation = '/data1/NMtest/others/DataChoice/NullMax/3D/pcd_2022-01-12-14-54/pcd_relation.txt'
-# with open(pcd_filetxt,'r') as f2,open(pcd_relation,'a+') as f3:
-#     for pcd_file_line in f2.readlines():
-#         pcd_file_line.strip()
-#         pcd1 = int(pcd_file_line.split('.')[0])
-#         pcd2 = int(pcd_file_line.split('.')[1])
-#         pcdtime = int(pcd1*1000000 + pcd2/1000)
-#         pcdtime2 = int((pcd1+1)*1000000 + pcd2/1000)
-#         for temp in int_time_list.keys():
-#             if pcdtime<int(temp)<pcdtime2:
-#                 pcdname = pcd_file_line[:-1]
-#                 ori_frameid = str(int_time_list[temp])
-#                 rename_frameid = str(dict2[ori_frameid]) + '.pcd'
-#                 comment=pcdname +'|' + ori_frameid + '|' +rename_frameid +'\n'
-#                 f3.write(comment)
+def get_pcd_txt():
+    with open(pcd_file,'a+') as f:
+        for root,files in utils.walk(img_path):
+            for file_ in files:
+                if 'FOV30' in root and 'bak' not in root:
+                    # 获取重命名后的文件名称
+                    new_file_name = get_newfile_name(file_)
+                    num = int(new_file_name.split('.')[0].split('_')[-1])
 
-'''移动pcd文件'''
-with open(pcd_relation,'r') as f4:
-    for pcd_line in f4.readlines():
-        pcd_line.strip()
-        old_pcd = pcd_line.split('|')[0]
-        new_pcd = pcd_line.split('|')[-1]
-        os.system('cp {}/{} {}'.format(pcd_file,old_pcd,newpcd_filepath1))
-        os.system('cp {}/{} {}/{}'.format(pcd_file,old_pcd,newpcd_filepath2,new_pcd))
+                    # 获取标注的文件列表
+                    lable_file_list = get_lable_list() 
 
+                    if new_file_name in lable_file_list and num>0:
+                        #根据新frame_id的名称移动pcd
+                        print(new_file_name)
+
+                        hour = file_.split('/')[-4]
+                        day = hour.rsplit('-',2)[0]
+                        filenum = os.path.basename(file_).split('.')[0]
+                        new_pcd_path1 = os.path.join(pcd_path1,day,hour)
+                        new_pcd_path2 = os.path.join(pcd_path2,day,hour)
+                        if os.path.isdir(new_pcd_path1):
+                            new_pcd_path_real=new_pcd_path1
+                        else:
+                            new_pcd_path_real=new_pcd_path2
+                        new_pcd_path = os.path.join(new_pcd_path_real,'config/pcd')
+                        timestamp = os.path.join(new_pcd_path_real,'config','timestamp_vc2.log')
+                        # 根据frame_id获取时间戳
+                        int_time = get_timestamp(filenum,timestamp)
+
+                        # 根据时间戳获取pcd的名称
+                        pcd_name = depend_inttime_get_pcdname(new_pcd_path,int_time)
+                        newpcdname = new_file_name.replace('png','pcd')        
+
+                        #将对应存入到txt文档中
+                        comment = file_ + '|' + new_file_name + '|' + os.path.join(new_pcd_path,pcd_name) + '|' + newpcdname + '\n'
+                        print(comment)
+                        f.write(comment)
+
+def mv_pcd_file():
+    with open(pcd_file,'r') as f:
+        for line in f.readlines():
+            # print(line)
+            old_pcdfile = line.split('|')[-2]
+            new_pcdfile = line.split('|')[-1]
+            os.makedirs(pcd_dst,exist_ok=True)
+            new_pcdfile = os.path.join(pcd_dst,new_pcdfile)
+            command = 'cp {} {}'.format(old_pcdfile,new_pcdfile)
+            print(command)
+            os.system(command)
+
+def main():
+    # get_pcd_txt()
+    mv_pcd_file()
                 
-            
+if __name__=='__main__':
+    main()           
             
 

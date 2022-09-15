@@ -19,7 +19,7 @@ for root,files in utils.walk(src):
         basename = os.path.basename(file_)
         img = cv2.imread(file_)
         # 直接缩放到固定大小，无特定比例
-        # img = cv2.resize(img, (640, 384)
+        img = cv2.resize(img, (1920, 1080))
         '''
         resize(InputArray src, OutputArray dst, Size dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR )
         fx:宽，fy:高
@@ -30,7 +30,7 @@ for root,files in utils.walk(src):
             INTER_LANCZOS4 - 8x8像素邻域内的Lanczos插值
         '''
         # 缩放几倍，
-        img = cv2.resize(img, (0, 0), fx=3, fy=3, interpolation=cv2.INTER_NEAREST)
+        # img = cv2.resize(img, (0, 0), fx=3, fy=3, interpolation=cv2.INTER_NEAREST)
         dst_file = file_.replace(src,dst)
         os.makedirs(os.path.dirname(dst_file),exist_ok=True)       
         cv2.imwrite(dst_file,img,)
