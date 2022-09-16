@@ -326,24 +326,25 @@ def parse_args():
     print(args)
     return args
 
-if __name__ == '__main__':
-    args = parse_args()
-
+def undist_120(src):
     intrinsic_path = 'ocam_intrinsic'
     # for _, dirpath, fpaths in walk(args.imgpath, regex=args.regex):
-    for root, dirpath, fpaths in os.walk(args.imgpath):
+    for root, dirpath, fpaths in os.walk(src):
         for fpath in fpaths:
-            ocam_file = os.path.join(intrinsic_path, 'fc120', 'ocam_intrinsics.txt')
-            ocam = OcamCamera(ocam_file)
-            fpath_ = os.path.join(root,fpath)
-            print(fpath_)
-            distorted_image = cv2.imread(fpath_)
-            undistort_image= ocam.undistort_image(distorted_image, 1920, 1080)
-            # dst_imgfpath = args.dst / Path(fpath).relative_to(args.ROOT)
-            # dst_path = dst_imgfpath.parent
-            # if not dst_path.exists():
-            #     dst_path.mkdir(parents=True)
-                
-            # cv2.imwrite(dst_imgfpath.as_posix(), undistort_image)
-            save_img = os.path.join(args.dst,fpath)
-            cv2.imwrite(save_img, undistort_image,)
+            if 'FOV120' in root and 'FOV120_un' not in root:                    
+                ocam_file = os.path.join(intrinsic_path, 'fc120', 'ocam_intrinsics.txt')
+                ocam = OcamCamera(ocam_file)
+                fpath_ = os.path.join(root,fpath)
+                print(fpath_)
+                distorted_image = cv2.imread(fpath_)
+                undistort_image= ocam.undistort_image(distorted_image, 1920, 1080)
+                # dst_imgfpath = args.dst / Path(fpath).relative_to(args.ROOT)
+                # dst_path = dst_imgfpath.parent
+                # if not dst_path.exists():
+                #     dst_path.mkdir(parents=True)
+                    
+                # cv2.imwrite(dst_imgfpath.as_posix(), undistort_image)
+                dst = root.replace('FOV120','FOV120_undist')
+                os.makedirs(dst,exist_ok=True)
+                save_img = os.path.join(dst,fpath)
+                cv2.imwrite(save_img, undistort_image,)
