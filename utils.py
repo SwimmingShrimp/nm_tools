@@ -24,7 +24,7 @@ def write_json_data(json_file,str_content):
 
 
 #遍历文件下所有文件，返回函数walks： for root,files in walks(src):  files返回绝对路径+文件，且已从小到大排序
-imgtypes = ['.jpg', '.bmp', '.png', '.yuv']
+imgtypes = ['.jpg', '.bmp', '.png', '.yuv','.pcd']
 def usort(fnames):
     if isinstance(fnames, dict):
         fnames = dict(sorted(fnames.items(), key=lambda k: int(re.sub(r'[^0-9]', '', k[0]))))
