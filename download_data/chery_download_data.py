@@ -71,20 +71,24 @@ def complete_black_edge():
                 cv2.imwrite(file_,img,)
 
 def check_pic_normal():
-    for root,files in utils.walk(dst):
-        for i in range(len(files)):
-            try:
-                Image.open(files[i]).load()
-            # except SyntaxError as e:
-            # except OSError as e:
-            except:
-                command = 'cp {} {}'.format(files[i-1],files[i])
-                print(command)
-                os.system(command)
+    err_txt_path = os.path.join(dst,'err_pic.txt')
+    with open(err_txt_path,'a+') as f:
+        for root,files in utils.walk(dst):
+            for i in range(len(files)):
+                try:
+                    Image.open(files[i]).load()
+                # except SyntaxError as e:
+                except:
+                    comment = files[i] + '\n'
+                    command = 'cp {} {}'.format(files[i-1],files[i])
+                    print(command)
+                    os.system(command)
+                    f.write(comment)
+       
 
 def main():
-    # download_data()
-    check_pic_normal()  
+    download_data()
+    check_pic_normal()
     undist_nullmax_jyf.undist_120(dst)
     complete_black_edge()
 
