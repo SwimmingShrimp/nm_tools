@@ -2,8 +2,8 @@ import os
 import argparse
 import glob
 from pathlib import Path
-import re
-import os.path as osp
+import sys
+sys.path.append("..")
 import utils
 
 def parse_args():
