@@ -60,16 +60,6 @@ def download_data():
                 os.system('cp {} {}'.format(file_,dst5,))
                 os.system('cp {} {}'.format(file_120,dst51,))
 
-def complete_black_edge():
-    for root,files in utils.walk(dst):
-        for file_ in  files:
-            if 'FOV30' in root or 'FOV120_undist' in root:
-                img = cv2.imread(file_)
-                os.makedirs(os.path.dirname(file_),exist_ok=True)
-                # cv2.copyMakeBorder(src,top,bottom,left,right,borderType,value)
-                img = cv2.copyMakeBorder(img, 200, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
-                cv2.imwrite(file_,img,)
-
 def check_pic_normal():
     err_txt_path = os.path.join(dst,'err_pic.txt')
     with open(err_txt_path,'a+') as f:
@@ -84,13 +74,34 @@ def check_pic_normal():
                     print(command)
                     os.system(command)
                     f.write(comment)
-       
+
+def complete_black_edge():
+    for root,files in utils.walk(dst):
+        for file_ in  files:
+            if 'FOV30' in root or 'FOV120_undist' in root:
+                img = cv2.imread(file_)
+                os.makedirs(os.path.dirname(file_),exist_ok=True)
+                # cv2.copyMakeBorder(src,top,bottom,left,right,borderType,value)
+                img = cv2.copyMakeBorder(img, 200, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
+                cv2.imwrite(file_,img,)
+
+def rename_pic():
+    for root,files in utils.walk(dst):
+        for file_ in  files:
+            if 'FOV30' in root:
+                new_file = file_.replace('vc1','vc2')
+            elif 'FOV120_undist' in root:
+                new_file = file_.replace('vc2','vc1')
+            else:
+                continue
+            os.system('mv {} {}'.format(file_,new_file))      
 
 def main():
-    download_data()
-    check_pic_normal()
-    undist_nullmax_jyf.undist_120(dst)
-    complete_black_edge()
+    # download_data()
+    # check_pic_normal()
+    # undist_nullmax_jyf.undist_120(dst)
+    # complete_black_edge()
+    rename_pic()
 
 if __name__=='__main__':
     main()

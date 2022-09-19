@@ -21,7 +21,7 @@ for root, files in utils.walk(src):
     for file_ in files:
         print(file_)
         img = cv2.imread(file_)
-        #img[宽开始：结束，高开始：结束]
+        #img[高开始：结束，宽开始：结束]
         img_crop = img[200:1280,0:1920]
         dst_file = file_.replace(src,dst)
         dst_path = os.path.dirname(dst_file) 
