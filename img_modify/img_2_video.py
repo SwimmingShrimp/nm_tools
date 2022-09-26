@@ -9,7 +9,7 @@ import argparse
 '''
 def video_writer_function(output_name):
     fourcc = cv2.VideoWriter.fourcc(*'MP4V')
-    video_writer = cv2.VideoWriter(filename=output_name, fourcc=fourcc, fps=7, frameSize=(844, 768))
+    video_writer = cv2.VideoWriter(filename=output_name, fourcc=fourcc, fps=7, frameSize=(947, 768))
     return video_writer
 
 def main():
@@ -28,7 +28,7 @@ def main():
                 path_pic = os.path.join(root,pics[i])
                 img = cv2.imread(path_pic)
                 cv2.namedWindow('image',flags=cv2.WINDOW_NORMAL)
-                cv2.resizeWindow('image',(844,768))
+                cv2.resizeWindow('image',(947,768))
                 cv2.imshow('image',img)
                 cv2.waitKey(100)
                 if i == 0 or i%1500==0:

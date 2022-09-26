@@ -20,6 +20,7 @@ for root,files in utils.walk(src):
         img = cv2.imread(file_)
         # 直接缩放到固定大小，无特定比例
         img = cv2.resize(img, (1920, 1080))
+        img = cv2.copyMakeBorder(img, 200, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
         '''
         resize(InputArray src, OutputArray dst, Size dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR )
         fx:宽，fy:高

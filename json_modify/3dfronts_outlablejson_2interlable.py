@@ -5,8 +5,8 @@ import utils
 import config
 
 json_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/1_json/chery/3d_outlable_ori'
-json_dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/1_json/chery/3d_lable_merge'
-json_dst2 = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/1_json/chery/3d_lable_merge2'
+json_dst = '/home/lixialin/Pictures/3d/3d_lable_merge'
+json_dst2 = '/home/lixialin/Pictures/3d/3d_lable_merge2'
 os.makedirs(json_dst,exist_ok=True)
 os.makedirs(json_dst2,exist_ok=True)
 

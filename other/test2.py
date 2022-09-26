@@ -2,8 +2,8 @@ import utils
 import os
 
 idx =0 
-src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/night/1920x1080_png/FOV120'
-dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/new_night/1920x1080_png/FOV120'
+src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/0_temp/2022-01-12-14-54/1/FOV30'
+dst = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/0_temp/2022-01-12-14-54/1/FOV30'
 relation_src = '/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d/nullmax/0_dataset/Qirui/2D/new_night'
 
 os.makedirs(dst,exist_ok=True)
