@@ -8,8 +8,8 @@ import argparse
 注意：需要修改压缩图片的分辨率
 '''
 def video_writer_function(output_name):
-    fourcc = cv2.VideoWriter.fourcc(*'MP4V')
-    video_writer = cv2.VideoWriter(filename=output_name, fourcc=fourcc, fps=7, frameSize=(947, 768))
+    fourcc = cv2.VideoWriter.fourcc(*'mp4v')
+    video_writer = cv2.VideoWriter(filename=output_name, fourcc=fourcc, fps=10, frameSize=(1920, 1280))
     return video_writer
 
 def main():
@@ -27,10 +27,10 @@ def main():
             for i in range(len(pics)):
                 path_pic = os.path.join(root,pics[i])
                 img = cv2.imread(path_pic)
-                cv2.namedWindow('image',flags=cv2.WINDOW_NORMAL)
-                cv2.resizeWindow('image',(947,768))
-                cv2.imshow('image',img)
-                cv2.waitKey(100)
+                # cv2.namedWindow('image',flags=cv2.WINDOW_NORMAL)
+                # cv2.resizeWindow('image',(947,768))
+                # cv2.imshow('image',img)
+                # cv2.waitKey(100)
                 if i == 0 or i%1500==0:
                     dstfile = os.path.join(args.path_output,(str(j)+'.mp4'))
                     j+=1
