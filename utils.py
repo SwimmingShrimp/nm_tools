@@ -22,6 +22,46 @@ def write_json_data(json_file,str_content):
         except:
             logging.Logger.info('写入json内容失败')
 
+def judge_is_in_attentionArea(x,y, attention_area):
+    is_in = False  
+    point = [x, y]
+    xn = [float(x) for x in attention_area["xn"].replace('"', '').split(';')]
+    yn = [float(y) for y in attention_area["yn"].replace('"', '').split(';')]
+    polygon_temp = zip(xn, yn)
+    polygon = []
+    for temp in polygon_temp:
+        temp1 = list(temp)
+        polygon.append(temp1)
+    if is_in_poly(point, polygon):
+        is_in = True
+    return is_in
+
+def is_in_poly(p, poly):
+    """
+    判断点是否在任意多边形内部
+    :param p: [x, y]
+    :param poly: [[], [], [], [], ...]
+    :return:
+    """
+    px, py = p
+    poly = list(poly)
+    is_in = False
+    for i, corner in enumerate(poly):
+        next_i = i + 1 if i + 1 < len(poly) else 0
+        x1, y1 = corner
+        x2, y2 = poly[next_i]
+        if (x1 == px and y1 == py) or (x2 == px and y2 == py):  # if point is on vertex
+            is_in = True
+            break
+        if min(y1, y2) < py <= max(y1, y2):  # find horizontal edges of polygon
+            x = x1 + (py - y1) * (x2 - x1) / (y2 - y1)
+            if x == px:  # if point is on edge
+                is_in = True
+                break
+            elif x > px:  # if point is on left-side of line
+                is_in = not is_in
+    return is_in
+
 
 #遍历文件下所有文件，返回函数walks： for root,files in walks(src):  files返回绝对路径+文件，且已从小到大排序
 imgtypes = ['.jpg', '.bmp', '.png', '.yuv','.pcd']

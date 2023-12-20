@@ -1,0 +1,163 @@
+VERSION "1"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1922 Lanes_Adjacent_Header: 1 Vector__XXX
+ SG_ Reserved : 0|4@1+ (1,0) [0|0] "NA" Vector__XXX
+ SG_ Lanes_Adjacent_Count : 4|4@1+ (1,0) [0|8] "counter" Vector__XXX
+
+
+BO_ 1924 Lanes_Adjacent_1A: 6 Vector__XXX
+ SG_ Adjacent_Type_1 : 0|4@1+ (1,0) [0|15] "ENUM" Vector__XXX
+ SG_ Adjacent_Confidence_1 : 4|7@1+ (0.01,0) [0|1] "conf" Vector__XXX
+ SG_ Adjacent_View_Range_Start_1 : 11|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_View_Range_End_1 : 26|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_Line_Role_1 : 41|4@1+ (1,0) [0|8] "ENUM" Vector__XXX
+ SG_ Reserved : 45|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1925 Lanes_Adjacent_1B: 7 Vector__XXX
+ SG_ Adjacent_Line_C0_1 : 0|11@1+ (0.01,-10) [-10|10] "meter" Vector__XXX
+ SG_ Adjacent_Line_C1_1 : 11|10@1+ (0.000977,-0.357) [-0.357|0.357] "rad" Vector__XXX
+ SG_ Adjacent_Line_C2_1 : 21|16@1+ (9.77E-007,-0.032) [-0.032|0.032] "1/m" Vector__XXX
+ SG_ Adjacent_Line_C3_1 : 37|16@1+ (3.73E-009,-0.000122) [-0.000122|0.000122] "1/m2" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1926 Lanes_Adjacent_2A: 6 Vector__XXX
+ SG_ Adjacent_Type_2 : 0|4@1+ (1,0) [0|15] "ENUM" Vector__XXX
+ SG_ Adjacent_Confidence_2 : 4|7@1+ (0.01,0) [0|1] "conf" Vector__XXX
+ SG_ Adjacent_View_Range_Start_2 : 11|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_View_Range_End_2 : 26|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_Line_Role_2 : 41|4@1+ (1,0) [0|8] "ENUM" Vector__XXX
+ SG_ Reserved : 45|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1927 Lanes_Adjacent_2B: 7 Vector__XXX
+ SG_ Adjacent_Line_C0_2 : 0|11@1+ (0.01,-10) [-10|10] "meter" Vector__XXX
+ SG_ Adjacent_Line_C1_2 : 11|10@1+ (0.000977,-0.357) [-0.357|0.357] "rad" Vector__XXX
+ SG_ Adjacent_Line_C2_2 : 21|16@1+ (9.77E-007,-0.032) [-0.032|0.032] "1/m" Vector__XXX
+ SG_ Adjacent_Line_C3_2 : 37|16@1+ (3.73E-009,-0.000122) [-0.000122|0.000122] "1/m2" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1928 Lanes_Adjacent_3A: 6 Vector__XXX
+ SG_ Adjacent_Type_3 : 0|4@1+ (1,0) [0|15] "ENUM" Vector__XXX
+ SG_ Adjacent_Confidence_3 : 4|7@1+ (0.01,0) [0|1] "conf" Vector__XXX
+ SG_ Adjacent_View_Range_Start_3 : 11|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_View_Range_End_3 : 26|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_Line_Role_3 : 41|4@1+ (1,0) [0|8] "ENUM" Vector__XXX
+ SG_ Reserved : 45|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1929 Lanes_Adjacent_3B: 7 Vector__XXX
+ SG_ Adjacent_Line_C0_3 : 0|11@1+ (0.01,-10) [-10|10] "meter" Vector__XXX
+ SG_ Adjacent_Line_C1_3 : 11|10@1+ (0.000977,-0.357) [-0.357|0.357] "rad" Vector__XXX
+ SG_ Adjacent_Line_C2_3 : 21|16@1+ (9.77E-007,-0.032) [-0.032|0.032] "1/m" Vector__XXX
+ SG_ Adjacent_Line_C3_3 : 37|16@1+ (3.73E-009,-0.000122) [-0.000122|0.000122] "1/m2" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1930 Lanes_Adjacent_4A: 6 Vector__XXX
+ SG_ Adjacent_Type_4 : 0|4@1+ (1,0) [0|15] "ENUM" Vector__XXX
+ SG_ Adjacent_Confidence_4 : 4|7@1+ (0.01,0) [0|1] "conf" Vector__XXX
+ SG_ Adjacent_View_Range_Start_4 : 11|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_View_Range_End_4 : 26|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ Adjacent_Line_Role_4 : 41|4@1+ (1,0) [0|8] "ENUM" Vector__XXX
+ SG_ Reserved : 45|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+BO_ 1931 Lanes_Adjacent_4B: 7 Vector__XXX
+ SG_ Adjacent_Line_C0_4 : 0|11@1+ (0.01,-10) [-10|10] "meter" Vector__XXX
+ SG_ Adjacent_Line_C1_4 : 11|10@1+ (0.000977,-0.357) [-0.357|0.357] "rad" Vector__XXX
+ SG_ Adjacent_Line_C2_4 : 21|16@1+ (9.77E-007,-0.032) [-0.032|0.032] "1/m" Vector__XXX
+ SG_ Adjacent_Line_C3_4 : 37|16@1+ (3.73E-009,-0.000122) [-0.000122|0.000122] "1/m2" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+CM_ SG_ 1922 Lanes_Adjacent_Count "number of lines supported by this protocol";
+CM_ SG_ 1924 Adjacent_Type_1 "ENUM of Lane Mark Type Classification";
+CM_ SG_ 1924 Adjacent_Confidence_1 "Confidence of lane mark ";
+CM_ SG_ 1924 Adjacent_View_Range_Start_1 "Start of longitudinal view range of lane mark";
+CM_ SG_ 1924 Adjacent_View_Range_End_1 "End of longitudinal view range of lane mark";
+CM_ SG_ 1924 Adjacent_Line_Role_1 "The role of the lane mark relative to the host vehicle.  Commonly the host left boundary is also the right boundary of the next left lane (and the host right boundary is also the left boundary of the next right lane)  RIGHT_RIGHT_LANEMARK represents the ne";
+CM_ SG_ 1925 Adjacent_Line_C0_1 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1925 Adjacent_Line_C1_1 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1925 Adjacent_Line_C2_1 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1925 Adjacent_Line_C3_1 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1926 Adjacent_Type_2 "ENUM of Lane Mark Type Classification";
+CM_ SG_ 1926 Adjacent_Confidence_2 "Confidence of lane mark ";
+CM_ SG_ 1926 Adjacent_View_Range_Start_2 "Start of longitudinal view range of lane mark";
+CM_ SG_ 1926 Adjacent_View_Range_End_2 "End of longitudinal view range of lane mark";
+CM_ SG_ 1926 Adjacent_Line_Role_2 "The role of the lane mark relative to the host vehicle.  Commonly the host left boundary is also the right boundary of the next left lane (and the host right boundary is also the left boundary of the next right lane)  RIGHT_RIGHT_LANEMARK represents the ne";
+CM_ SG_ 1927 Adjacent_Line_C0_2 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1927 Adjacent_Line_C1_2 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1927 Adjacent_Line_C2_2 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1927 Adjacent_Line_C3_2 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1928 Adjacent_Type_3 "ENUM of Lane Mark Type Classification";
+CM_ SG_ 1928 Adjacent_Confidence_3 "Confidence of lane mark ";
+CM_ SG_ 1928 Adjacent_View_Range_Start_3 "Start of longitudinal view range of lane mark";
+CM_ SG_ 1928 Adjacent_View_Range_End_3 "End of longitudinal view range of lane mark";
+CM_ SG_ 1928 Adjacent_Line_Role_3 "The role of the lane mark relative to the host vehicle.  Commonly the host left boundary is also the right boundary of the next left lane (and the host right boundary is also the left boundary of the next right lane)  RIGHT_RIGHT_LANEMARK represents the ne";
+CM_ SG_ 1929 Adjacent_Line_C0_3 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1929 Adjacent_Line_C1_3 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1929 Adjacent_Line_C2_3 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1929 Adjacent_Line_C3_3 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1930 Adjacent_Type_4 "ENUM of Lane Mark Type Classification";
+CM_ SG_ 1930 Adjacent_Confidence_4 "Confidence of lane mark ";
+CM_ SG_ 1930 Adjacent_View_Range_Start_4 "Start of longitudinal view range of lane mark";
+CM_ SG_ 1930 Adjacent_View_Range_End_4 "End of longitudinal view range of lane mark";
+CM_ SG_ 1930 Adjacent_Line_Role_4 "The role of the lane mark relative to the host vehicle.  Commonly the host left boundary is also the right boundary of the next left lane (and the host right boundary is also the left boundary of the next right lane)  RIGHT_RIGHT_LANEMARK represents the ne";
+CM_ SG_ 1931 Adjacent_Line_C0_4 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1931 Adjacent_Line_C1_4 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1931 Adjacent_Line_C2_4 "Ci is coefficient corresponding to variable with power of 'i'";
+CM_ SG_ 1931 Adjacent_Line_C3_4 "Ci is coefficient corresponding to variable with power of 'i'";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 1924 Adjacent_Type_1 6 "HOV_LANE" 5 "DECELERATION" 4 "BOTTS" 3 "DLM" 2 "DASHED" 1 "SOLID" 0 "UNDECIDED" ;
+VAL_ 1926 Adjacent_Type_2 6 "HOV_LANE" 5 "DECELERATION" 4 "BOTTS" 3 "DLM" 2 "DASHED" 1 "SOLID" 0 "UNDECIDED" ;
+VAL_ 1928 Adjacent_Type_3 6 "HOV_LANE" 5 "DECELERATION" 4 "BOTTS" 3 "DLM" 2 "DASHED" 1 "SOLID" 0 "UNDECIDED" ;
+VAL_ 1930 Adjacent_Type_4 6 "HOV_LANE" 5 "DECELERATION" 4 "BOTTS" 3 "DLM" 2 "DASHED" 1 "SOLID" 0 "UNDECIDED" ;
+VAL_ 1924 Adjacent_Line_Role_1 4 "RIGHT__RIGHT_LANEMARK" 3 "RIGHT__LEFT_LANEMARK" 2 "LEFT__RIGHT_LANEMARK" 1 "LEFT__LEFT_LANEMARK" 0 "NONE " ;
+VAL_ 1926 Adjacent_Line_Role_2 4 "RIGHT__RIGHT_LANEMARK" 3 "RIGHT__LEFT_LANEMARK" 2 "LEFT__RIGHT_LANEMARK" 1 "LEFT__LEFT_LANEMARK" 0 "NONE " ;
+VAL_ 1928 Adjacent_Line_Role_3 4 "RIGHT__RIGHT_LANEMARK" 3 "RIGHT__LEFT_LANEMARK" 2 "LEFT__RIGHT_LANEMARK" 1 "LEFT__LEFT_LANEMARK" 0 "NONE " ;
+VAL_ 1930 Adjacent_Line_Role_4 4 "RIGHT__RIGHT_LANEMARK" 3 "RIGHT__LEFT_LANEMARK" 2 "LEFT__RIGHT_LANEMARK" 1 "LEFT__LEFT_LANEMARK" 0 "NONE " ;

@@ -1,0 +1,170 @@
+VERSION "2"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1158 Hazards_Header: 6 Vector__XXX
+ SG_ Protocol_Version : 0|8@1+ (1,0) [2|2] "counter" Vector__XXX
+ SG_ imageTimestamp : 8|32@1+ (1,0) [0|4294967295] "milliseconds" Vector__XXX
+ SG_ Num_Hazards_Objects : 40|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Valid_Frame : 47|1@1+ (1,0) [0|1] "bool" Vector__XXX
+
+
+BO_ 1159 Hazards_UTC: 7 Vector__XXX
+ SG_ UTC_Timestamp : 0|51@1+ (1,0) [0|2.25179981368524E+15] "microseconds" Vector__XXX
+
+
+BO_ 1160 Hazards_0A: 8 Vector__XXX
+ SG_ HZD_ID : 0|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ HZD_ExistenceProb : 8|10@1+ (0.001,0) [0|1] "NA" Vector__XXX
+ SG_ HZD_Lateral_Position : 18|15@1+ (0.01,-100) [-100|100] "m" Vector__XXX
+ SG_ HZD_Longitudinal_Position : 33|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ HZD_Vertical_Position : 48|12@1+ (0.01,-20) [-20|20] "m" Vector__XXX
+
+
+BO_ 1161 Hazards_0B: 5 Vector__XXX
+ SG_ HZD_Height : 0|9@1+ (0.01,0) [0|5] "m" Vector__XXX
+ SG_ HZD_Width : 9|13@1+ (0.01,0) [0|50] "m" Vector__XXX
+ SG_ HZD_Lateral_STD : 22|8@1+ (0.05,0) [0|10] "NA" Vector__XXX
+ SG_ HZD_Longitudinal_STD : 30|9@1+ (0.05,0) [0|20] "NA" Vector__XXX
+
+
+BO_ 1162 Hazards_1A: 8 Vector__XXX
+ SG_ HZD_ID : 0|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ HZD_ExistenceProb : 8|10@1+ (0.001,0) [0|1] "NA" Vector__XXX
+ SG_ HZD_Lateral_Position : 18|15@1+ (0.01,-100) [-100|100] "m" Vector__XXX
+ SG_ HZD_Longitudinal_Position : 33|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ HZD_Vertical_Position : 48|12@1+ (0.01,-20) [-20|20] "m" Vector__XXX
+
+
+BO_ 1163 Hazards_1B: 5 Vector__XXX
+ SG_ HZD_Height : 0|9@1+ (0.01,0) [0|5] "m" Vector__XXX
+ SG_ HZD_Width : 9|13@1+ (0.01,0) [0|50] "m" Vector__XXX
+ SG_ HZD_Lateral_STD : 22|8@1+ (0.05,0) [0|10] "NA" Vector__XXX
+ SG_ HZD_Longitudinal_STD : 30|9@1+ (0.05,0) [0|20] "NA" Vector__XXX
+
+
+BO_ 1164 Hazards_2A: 8 Vector__XXX
+ SG_ HZD_ID : 0|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ HZD_ExistenceProb : 8|10@1+ (0.001,0) [0|1] "NA" Vector__XXX
+ SG_ HZD_Lateral_Position : 18|15@1+ (0.01,-100) [-100|100] "m" Vector__XXX
+ SG_ HZD_Longitudinal_Position : 33|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ HZD_Vertical_Position : 48|12@1+ (0.01,-20) [-20|20] "m" Vector__XXX
+
+
+BO_ 1165 Hazards_2B: 5 Vector__XXX
+ SG_ HZD_Height : 0|9@1+ (0.01,0) [0|5] "m" Vector__XXX
+ SG_ HZD_Width : 9|13@1+ (0.01,0) [0|50] "m" Vector__XXX
+ SG_ HZD_Lateral_STD : 22|8@1+ (0.05,0) [0|10] "NA" Vector__XXX
+ SG_ HZD_Longitudinal_STD : 30|9@1+ (0.05,0) [0|20] "NA" Vector__XXX
+
+
+BO_ 1166 Hazards_3A: 8 Vector__XXX
+ SG_ HZD_ID : 0|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ HZD_ExistenceProb : 8|10@1+ (0.001,0) [0|1] "NA" Vector__XXX
+ SG_ HZD_Lateral_Position : 18|15@1+ (0.01,-100) [-100|100] "m" Vector__XXX
+ SG_ HZD_Longitudinal_Position : 33|15@1+ (0.01,0) [0|200] "m" Vector__XXX
+ SG_ HZD_Vertical_Position : 48|12@1+ (0.01,-20) [-20|20] "m" Vector__XXX
+
+
+BO_ 1167 Hazards_3B: 5 Vector__XXX
+ SG_ HZD_Height : 0|9@1+ (0.01,0) [0|5] "m" Vector__XXX
+ SG_ HZD_Width : 9|13@1+ (0.01,0) [0|50] "m" Vector__XXX
+ SG_ HZD_Lateral_STD : 22|8@1+ (0.05,0) [0|10] "NA" Vector__XXX
+ SG_ HZD_Longitudinal_STD : 30|9@1+ (0.05,0) [0|20] "NA" Vector__XXX
+
+
+
+
+
+CM_ SG_ 1158 Protocol_Version "Denotes the protocol version";
+CM_ SG_ 1158 imageTimestamp "The time in which the image was grabbed, in external clock time";
+CM_ SG_ 1158 Num_Hazards_Objects "Number of hazards reported in hazards protocol";
+CM_ SG_ 1158 Valid_Frame "If frame is not valid, data is not to be used";
+CM_ SG_ 1159 UTC_Timestamp "UTC timestamp. If unavailble, an external clock time, which is used in meSyncProtocol3, will take affect. Otherwise an internal (ME) clock will be outputted.";
+CM_ SG_ 1160 HZD_ID "The hazard element ID";
+CM_ SG_ 1160 HZD_ExistenceProb "Probability of presence of hazard";
+CM_ SG_ 1160 HZD_Lateral_Position "Lateral position of hazard in defined CS";
+CM_ SG_ 1160 HZD_Longitudinal_Position "Longitudinal position of hazard in defined CS";
+CM_ SG_ 1160 HZD_Vertical_Position "Vertical position of hazard in defined CS";
+CM_ SG_ 1161 HZD_Height "Height of hazard object";
+CM_ SG_ 1161 HZD_Width "Width of hazard object";
+CM_ SG_ 1161 HZD_Lateral_STD "Standard deviation of lateral position";
+CM_ SG_ 1161 HZD_Longitudinal_STD "Standard deviation of longitudinal position";
+CM_ SG_ 1162 HZD_ID "The hazard element ID";
+CM_ SG_ 1162 HZD_ExistenceProb "Probability of presence of hazard";
+CM_ SG_ 1162 HZD_Lateral_Position "Lateral position of hazard in defined CS";
+CM_ SG_ 1162 HZD_Longitudinal_Position "Longitudinal position of hazard in defined CS";
+CM_ SG_ 1162 HZD_Vertical_Position "Vertical position of hazard in defined CS";
+CM_ SG_ 1163 HZD_Height "Height of hazard object";
+CM_ SG_ 1163 HZD_Width "Width of hazard object";
+CM_ SG_ 1163 HZD_Lateral_STD "Standard deviation of lateral position";
+CM_ SG_ 1163 HZD_Longitudinal_STD "Standard deviation of longitudinal position";
+CM_ SG_ 1164 HZD_ID "The hazard element ID";
+CM_ SG_ 1164 HZD_ExistenceProb "Probability of presence of hazard";
+CM_ SG_ 1164 HZD_Lateral_Position "Lateral position of hazard in defined CS";
+CM_ SG_ 1164 HZD_Longitudinal_Position "Longitudinal position of hazard in defined CS";
+CM_ SG_ 1164 HZD_Vertical_Position "Vertical position of hazard in defined CS";
+CM_ SG_ 1165 HZD_Height "Height of hazard object";
+CM_ SG_ 1165 HZD_Width "Width of hazard object";
+CM_ SG_ 1165 HZD_Lateral_STD "Standard deviation of lateral position";
+CM_ SG_ 1165 HZD_Longitudinal_STD "Standard deviation of longitudinal position";
+CM_ SG_ 1166 HZD_ID "The hazard element ID";
+CM_ SG_ 1166 HZD_ExistenceProb "Probability of presence of hazard";
+CM_ SG_ 1166 HZD_Lateral_Position "Lateral position of hazard in defined CS";
+CM_ SG_ 1166 HZD_Longitudinal_Position "Longitudinal position of hazard in defined CS";
+CM_ SG_ 1166 HZD_Vertical_Position "Vertical position of hazard in defined CS";
+CM_ SG_ 1167 HZD_Height "Height of hazard object";
+CM_ SG_ 1167 HZD_Width "Width of hazard object";
+CM_ SG_ 1167 HZD_Lateral_STD "Standard deviation of lateral position";
+CM_ SG_ 1167 HZD_Longitudinal_STD "Standard deviation of longitudinal position";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 1158 Valid_Frame 1 "TRUE" 0 "FALSE" ;
+

@@ -1,0 +1,769 @@
+VERSION "4"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1345 Objects_Header: 3 Vector__XXX
+ SG_ Sync_Frame_Index : 0|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ Num_Of_Video_Objs : 8|4@1+ (1,0) [0|12] "counter" Vector__XXX
+ SG_ VD_CIPV_ID : 12|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ VD_CIPV_Lost : 19|2@1+ (1,0) [0|2] "ENUM" Vector__XXX
+ SG_ OBJ_VD_Allow_Acc : 21|2@1+ (1,0) [0|2] "ENUM" Vector__XXX
+ SG_ Reserved : 23|1@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1280 Objects_Signals_A1: 7 Vector__XXX
+ SG_ Obj_ID_1 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_1 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_1 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_1 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_1 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_1 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_1 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1281 Objects_Signals_B1: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_1 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_1 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_1 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1282 Objects_Signals_C1: 7 Vector__XXX
+ SG_ Absolute_Speed_1 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_1 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_1 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_1 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_1 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_1 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_1 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_1 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_1 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1283 Objects_Signals_A2: 7 Vector__XXX
+ SG_ Obj_ID_2 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_2 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_2 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_2 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_2 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_2 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_2 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1284 Objects_Signals_B2: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_2 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_2 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_2 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1285 Objects_Signals_C2: 7 Vector__XXX
+ SG_ Absolute_Speed_2 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_2 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_2 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_2 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_2 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_2 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_2 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_2 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_2 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1286 Objects_Signals_A3: 7 Vector__XXX
+ SG_ Obj_ID_3 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_3 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_3 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_3 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_3 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_3 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_3 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1287 Objects_Signals_B3: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_3 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_3 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_3 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1288 Objects_Signals_C3: 7 Vector__XXX
+ SG_ Absolute_Speed_3 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_3 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_3 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_3 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_3 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_3 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_3 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_3 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_3 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1289 Objects_Signals_A4: 7 Vector__XXX
+ SG_ Obj_ID_4 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_4 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_4 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_4 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_4 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_4 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_4 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1290 Objects_Signals_B4: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_4 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_4 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_4 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1291 Objects_Signals_C4: 7 Vector__XXX
+ SG_ Absolute_Speed_4 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_4 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_4 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_4 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_4 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_4 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_4 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_4 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_4 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1292 Objects_Signals_A5: 7 Vector__XXX
+ SG_ Obj_ID_5 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_5 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_5 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_5 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_5 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_5 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_5 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1293 Objects_Signals_B5: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_5 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_5 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_5 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1294 Objects_Signals_C5: 7 Vector__XXX
+ SG_ Absolute_Speed_5 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_5 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_5 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_5 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_5 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_5 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_5 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_5 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_5 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1295 Objects_Signals_A6: 7 Vector__XXX
+ SG_ Obj_ID_6 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_6 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_6 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_6 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_6 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_6 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_6 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1296 Objects_Signals_B6: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_6 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_6 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_6 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1297 Objects_Signals_C6: 7 Vector__XXX
+ SG_ Absolute_Speed_6 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_6 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_6 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_6 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_6 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_6 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_6 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_6 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_6 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1298 Objects_Signals_A7: 7 Vector__XXX
+ SG_ Obj_ID_7 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_7 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_7 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_7 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_7 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_7 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_7 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1299 Objects_Signals_B7: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_7 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_7 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_7 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1300 Objects_Signals_C7: 7 Vector__XXX
+ SG_ Absolute_Speed_7 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_7 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_7 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_7 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_7 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_7 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_7 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_7 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_7 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1301 Objects_Signals_A8: 7 Vector__XXX
+ SG_ Obj_ID_8 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_8 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_8 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_8 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_8 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_8 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_8 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1302 Objects_Signals_B8: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_8 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_8 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_8 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1303 Objects_Signals_C8: 7 Vector__XXX
+ SG_ Absolute_Speed_8 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_8 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_8 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_8 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_8 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_8 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_8 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_8 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_8 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1304 Objects_Signals_A9: 7 Vector__XXX
+ SG_ Obj_ID_9 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_9 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_9 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_9 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_9 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_9 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_9 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1305 Objects_Signals_B9: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_9 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_9 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_9 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1306 Objects_Signals_C9: 7 Vector__XXX
+ SG_ Absolute_Speed_9 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_9 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_9 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_9 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_9 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_9 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_9 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_9 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_9 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1307 Objects_Signals_A10: 7 Vector__XXX
+ SG_ Obj_ID_10 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_10 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_10 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_10 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_10 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_10 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_10 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1308 Objects_Signals_B10: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_10 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_10 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_10 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1309 Objects_Signals_C10: 7 Vector__XXX
+ SG_ Absolute_Speed_10 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_10 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_10 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_10 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_10 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_10 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_10 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_10 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_10 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1310 Objects_Signals_A11: 7 Vector__XXX
+ SG_ Obj_ID_11 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_11 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_11 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_11 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_11 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_11 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_11 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1311 Objects_Signals_B11: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_11 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_11 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_11 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1312 Objects_Signals_C11: 7 Vector__XXX
+ SG_ Absolute_Speed_11 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_11 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_11 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_11 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_11 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_11 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_11 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_11 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_11 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1313 Objects_Signals_A12: 7 Vector__XXX
+ SG_ Obj_ID_12 : 0|7@1+ (1,0) [0|127] "counter" Vector__XXX
+ SG_ Object_Class_12 : 7|3@1+ (1,0) [0|7] "ENUM" Vector__XXX
+ SG_ OBJ_Width_12 : 10|7@1+ (0.05,0) [0|6.35] "m" Vector__XXX
+ SG_ OBJ_Length_12 : 17|9@1+ (0.05,0) [0|25.5] "m" Vector__XXX
+ SG_ Relative_Long_Velocity_12 : 26|13@1+ (0.05,-120) [-120|130] "m/s" Vector__XXX
+ SG_ OBJ_Lane_Assignment_12 : 39|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ Relative_Lat_Velocity_12 : 42|11@1+ (0.05,-50) [-50|50] "m/s" Vector__XXX
+ SG_ Reserved : 53|3@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1314 Objects_Signals_B12: 5 Vector__XXX
+ SG_ Absolute_Long_Acc_12 : 0|9@1+ (0.05,-12.8) [-12.8|12.75] "m/s2" Vector__XXX
+ SG_ Long_Distance_12 : 9|13@1+ (0.05,0) [0|350] "m" Vector__XXX
+ SG_ Lateral_Distance_12 : 22|12@1+ (0.05,-102.4) [-102.4|102.3] "m" Vector__XXX
+ SG_ Reserved : 34|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+BO_ 1315 Objects_Signals_C12: 7 Vector__XXX
+ SG_ Absolute_Speed_12 : 0|12@1+ (0.05,-100) [-100|100] "m/s" Vector__XXX
+ SG_ OBJ_Motion_Status_12 : 12|3@1+ (1,0) [0|4] "ENUM " Vector__XXX
+ SG_ OBJ_Motion_Category_12 : 15|4@1+ (1,0) [0|12] "ENUM " Vector__XXX
+ SG_ Brake_Light_12 : 19|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Right_12 : 20|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Turn_Indicator_Left_12 : 21|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Light_indicator_validity_12 : 22|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ OBJ_Angle_Mid_12 : 23|14@1+ (0.0002,-1.571) [-1.571|1.571] "rad" Vector__XXX
+ SG_ OBJ_Angle_Rate_12 : 37|12@1+ (0.002,-2.234) [-2.234|2.2318] "rad/s" Vector__XXX
+ SG_ Reserved : 49|7@1+ (1,0) [0|0] "NA" Vector__XXX
+
+
+
+
+
+CM_ SG_ 1345 Sync_Frame_Index "synchronizes between the messages in the same frame";
+CM_ SG_ 1345 Num_Of_Video_Objs "Number of recognized video objects in the scene (Veds, Peds, Animals, General Objects)";
+CM_ SG_ 1345 VD_CIPV_ID "Represents the ID of the CIPV";
+CM_ SG_ 1345 VD_CIPV_Lost "State of the CIPV in terms of its loss";
+CM_ SG_ 1345 OBJ_VD_Allow_Acc "This signal is intended to suppress acceleration in stop and go ACC scenarios when we suspect something is in our way.  ";
+CM_ SG_ 1280 Obj_ID_1 "ID Manager based ID";
+CM_ SG_ 1280 Object_Class_1 "ObsIF:ObsType";
+CM_ SG_ 1280 OBJ_Width_1 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1280 OBJ_Length_1 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1280 Relative_Long_Velocity_1 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1280 OBJ_Lane_Assignment_1 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1280 Relative_Lat_Velocity_1 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1281 Absolute_Long_Acc_1 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1281 Long_Distance_1 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1281 Lateral_Distance_1 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1282 Absolute_Speed_1 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1282 OBJ_Motion_Status_1 "MOBILITY:Motion";
+CM_ SG_ 1282 OBJ_Motion_Category_1 "MOBILITY: movementCategory";
+CM_ SG_ 1282 Brake_Light_1 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1282 Turn_Indicator_Right_1 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1282 Turn_Indicator_Left_1 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1282 Light_indicator_validity_1 "VLI_INFO:Valid";
+CM_ SG_ 1282 OBJ_Angle_Mid_1 "ANGULAR STATES: angleMid";
+CM_ SG_ 1282 OBJ_Angle_Rate_1 "6.3.6.3";
+CM_ SG_ 1283 Obj_ID_2 "ID Manager based ID";
+CM_ SG_ 1283 Object_Class_2 "ObsIF:ObsType";
+CM_ SG_ 1283 OBJ_Width_2 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1283 OBJ_Length_2 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1283 Relative_Long_Velocity_2 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1283 OBJ_Lane_Assignment_2 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1283 Relative_Lat_Velocity_2 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1284 Absolute_Long_Acc_2 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1284 Long_Distance_2 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1284 Lateral_Distance_2 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1285 Absolute_Speed_2 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1285 OBJ_Motion_Status_2 "MOBILITY:Motion";
+CM_ SG_ 1285 OBJ_Motion_Category_2 "MOBILITY: movementCategory";
+CM_ SG_ 1285 Brake_Light_2 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1285 Turn_Indicator_Right_2 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1285 Turn_Indicator_Left_2 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1285 Light_indicator_validity_2 "VLI_INFO:Valid";
+CM_ SG_ 1285 OBJ_Angle_Mid_2 "ANGULAR STATES: angleMid";
+CM_ SG_ 1285 OBJ_Angle_Rate_2 "6.3.6.3";
+CM_ SG_ 1286 Obj_ID_3 "ID Manager based ID";
+CM_ SG_ 1286 Object_Class_3 "ObsIF:ObsType";
+CM_ SG_ 1286 OBJ_Width_3 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1286 OBJ_Length_3 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1286 Relative_Long_Velocity_3 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1286 OBJ_Lane_Assignment_3 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1286 Relative_Lat_Velocity_3 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1287 Absolute_Long_Acc_3 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1287 Long_Distance_3 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1287 Lateral_Distance_3 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1288 Absolute_Speed_3 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1288 OBJ_Motion_Status_3 "MOBILITY:Motion";
+CM_ SG_ 1288 OBJ_Motion_Category_3 "MOBILITY: movementCategory";
+CM_ SG_ 1288 Brake_Light_3 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1288 Turn_Indicator_Right_3 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1288 Turn_Indicator_Left_3 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1288 Light_indicator_validity_3 "VLI_INFO:Valid";
+CM_ SG_ 1288 OBJ_Angle_Mid_3 "ANGULAR STATES: angleMid";
+CM_ SG_ 1288 OBJ_Angle_Rate_3 "6.3.6.3";
+CM_ SG_ 1289 Obj_ID_4 "ID Manager based ID";
+CM_ SG_ 1289 Object_Class_4 "ObsIF:ObsType";
+CM_ SG_ 1289 OBJ_Width_4 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1289 OBJ_Length_4 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1289 Relative_Long_Velocity_4 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1289 OBJ_Lane_Assignment_4 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1289 Relative_Lat_Velocity_4 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1290 Absolute_Long_Acc_4 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1290 Long_Distance_4 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1290 Lateral_Distance_4 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1291 Absolute_Speed_4 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1291 OBJ_Motion_Status_4 "MOBILITY:Motion";
+CM_ SG_ 1291 OBJ_Motion_Category_4 "MOBILITY: movementCategory";
+CM_ SG_ 1291 Brake_Light_4 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1291 Turn_Indicator_Right_4 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1291 Turn_Indicator_Left_4 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1291 Light_indicator_validity_4 "VLI_INFO:Valid";
+CM_ SG_ 1291 OBJ_Angle_Mid_4 "ANGULAR STATES: angleMid";
+CM_ SG_ 1291 OBJ_Angle_Rate_4 "6.3.6.3";
+CM_ SG_ 1292 Obj_ID_5 "ID Manager based ID";
+CM_ SG_ 1292 Object_Class_5 "ObsIF:ObsType";
+CM_ SG_ 1292 OBJ_Width_5 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1292 OBJ_Length_5 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1292 Relative_Long_Velocity_5 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1292 OBJ_Lane_Assignment_5 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1292 Relative_Lat_Velocity_5 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1293 Absolute_Long_Acc_5 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1293 Long_Distance_5 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1293 Lateral_Distance_5 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1294 Absolute_Speed_5 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1294 OBJ_Motion_Status_5 "MOBILITY:Motion";
+CM_ SG_ 1294 OBJ_Motion_Category_5 "MOBILITY: movementCategory";
+CM_ SG_ 1294 Brake_Light_5 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1294 Turn_Indicator_Right_5 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1294 Turn_Indicator_Left_5 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1294 Light_indicator_validity_5 "VLI_INFO:Valid";
+CM_ SG_ 1294 OBJ_Angle_Mid_5 "ANGULAR STATES: angleMid";
+CM_ SG_ 1294 OBJ_Angle_Rate_5 "6.3.6.3";
+CM_ SG_ 1295 Obj_ID_6 "ID Manager based ID";
+CM_ SG_ 1295 Object_Class_6 "ObsIF:ObsType";
+CM_ SG_ 1295 OBJ_Width_6 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1295 OBJ_Length_6 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1295 Relative_Long_Velocity_6 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1295 OBJ_Lane_Assignment_6 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1295 Relative_Lat_Velocity_6 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1296 Absolute_Long_Acc_6 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1296 Long_Distance_6 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1296 Lateral_Distance_6 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1297 Absolute_Speed_6 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1297 OBJ_Motion_Status_6 "MOBILITY:Motion";
+CM_ SG_ 1297 OBJ_Motion_Category_6 "MOBILITY: movementCategory";
+CM_ SG_ 1297 Brake_Light_6 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1297 Turn_Indicator_Right_6 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1297 Turn_Indicator_Left_6 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1297 Light_indicator_validity_6 "VLI_INFO:Valid";
+CM_ SG_ 1297 OBJ_Angle_Mid_6 "ANGULAR STATES: angleMid";
+CM_ SG_ 1297 OBJ_Angle_Rate_6 "6.3.6.3";
+CM_ SG_ 1298 Obj_ID_7 "ID Manager based ID";
+CM_ SG_ 1298 Object_Class_7 "ObsIF:ObsType";
+CM_ SG_ 1298 OBJ_Width_7 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1298 OBJ_Length_7 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1298 Relative_Long_Velocity_7 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1298 OBJ_Lane_Assignment_7 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1298 Relative_Lat_Velocity_7 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1299 Absolute_Long_Acc_7 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1299 Long_Distance_7 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1299 Lateral_Distance_7 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1300 Absolute_Speed_7 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1300 OBJ_Motion_Status_7 "MOBILITY:Motion";
+CM_ SG_ 1300 OBJ_Motion_Category_7 "MOBILITY: movementCategory";
+CM_ SG_ 1300 Brake_Light_7 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1300 Turn_Indicator_Right_7 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1300 Turn_Indicator_Left_7 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1300 Light_indicator_validity_7 "VLI_INFO:Valid";
+CM_ SG_ 1300 OBJ_Angle_Mid_7 "ANGULAR STATES: angleMid";
+CM_ SG_ 1300 OBJ_Angle_Rate_7 "6.3.6.3";
+CM_ SG_ 1301 Obj_ID_8 "ID Manager based ID";
+CM_ SG_ 1301 Object_Class_8 "ObsIF:ObsType";
+CM_ SG_ 1301 OBJ_Width_8 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1301 OBJ_Length_8 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1301 Relative_Long_Velocity_8 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1301 OBJ_Lane_Assignment_8 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1301 Relative_Lat_Velocity_8 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1302 Absolute_Long_Acc_8 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1302 Long_Distance_8 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1302 Lateral_Distance_8 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1303 Absolute_Speed_8 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1303 OBJ_Motion_Status_8 "MOBILITY:Motion";
+CM_ SG_ 1303 OBJ_Motion_Category_8 "MOBILITY: movementCategory";
+CM_ SG_ 1303 Brake_Light_8 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1303 Turn_Indicator_Right_8 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1303 Turn_Indicator_Left_8 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1303 Light_indicator_validity_8 "VLI_INFO:Valid";
+CM_ SG_ 1303 OBJ_Angle_Mid_8 "ANGULAR STATES: angleMid";
+CM_ SG_ 1303 OBJ_Angle_Rate_8 "6.3.6.3";
+CM_ SG_ 1304 Obj_ID_9 "ID Manager based ID";
+CM_ SG_ 1304 Object_Class_9 "ObsIF:ObsType";
+CM_ SG_ 1304 OBJ_Width_9 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1304 OBJ_Length_9 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1304 Relative_Long_Velocity_9 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1304 OBJ_Lane_Assignment_9 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1304 Relative_Lat_Velocity_9 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1305 Absolute_Long_Acc_9 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1305 Long_Distance_9 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1305 Lateral_Distance_9 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1306 Absolute_Speed_9 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1306 OBJ_Motion_Status_9 "MOBILITY:Motion";
+CM_ SG_ 1306 OBJ_Motion_Category_9 "MOBILITY: movementCategory";
+CM_ SG_ 1306 Brake_Light_9 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1306 Turn_Indicator_Right_9 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1306 Turn_Indicator_Left_9 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1306 Light_indicator_validity_9 "VLI_INFO:Valid";
+CM_ SG_ 1306 OBJ_Angle_Mid_9 "ANGULAR STATES: angleMid";
+CM_ SG_ 1306 OBJ_Angle_Rate_9 "6.3.6.3";
+CM_ SG_ 1307 Obj_ID_10 "ID Manager based ID";
+CM_ SG_ 1307 Object_Class_10 "ObsIF:ObsType";
+CM_ SG_ 1307 OBJ_Width_10 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1307 OBJ_Length_10 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1307 Relative_Long_Velocity_10 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1307 OBJ_Lane_Assignment_10 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1307 Relative_Lat_Velocity_10 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1308 Absolute_Long_Acc_10 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1308 Long_Distance_10 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1308 Lateral_Distance_10 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1309 Absolute_Speed_10 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1309 OBJ_Motion_Status_10 "MOBILITY:Motion";
+CM_ SG_ 1309 OBJ_Motion_Category_10 "MOBILITY: movementCategory";
+CM_ SG_ 1309 Brake_Light_10 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1309 Turn_Indicator_Right_10 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1309 Turn_Indicator_Left_10 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1309 Light_indicator_validity_10 "VLI_INFO:Valid";
+CM_ SG_ 1309 OBJ_Angle_Mid_10 "ANGULAR STATES: angleMid";
+CM_ SG_ 1309 OBJ_Angle_Rate_10 "6.3.6.3";
+CM_ SG_ 1310 Obj_ID_11 "ID Manager based ID";
+CM_ SG_ 1310 Object_Class_11 "ObsIF:ObsType";
+CM_ SG_ 1310 OBJ_Width_11 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1310 OBJ_Length_11 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1310 Relative_Long_Velocity_11 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1310 OBJ_Lane_Assignment_11 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1310 Relative_Lat_Velocity_11 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1311 Absolute_Long_Acc_11 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1311 Long_Distance_11 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1311 Lateral_Distance_11 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1312 Absolute_Speed_11 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1312 OBJ_Motion_Status_11 "MOBILITY:Motion";
+CM_ SG_ 1312 OBJ_Motion_Category_11 "MOBILITY: movementCategory";
+CM_ SG_ 1312 Brake_Light_11 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1312 Turn_Indicator_Right_11 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1312 Turn_Indicator_Left_11 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1312 Light_indicator_validity_11 "VLI_INFO:Valid";
+CM_ SG_ 1312 OBJ_Angle_Mid_11 "ANGULAR STATES: angleMid";
+CM_ SG_ 1312 OBJ_Angle_Rate_11 "6.3.6.3";
+CM_ SG_ 1313 Obj_ID_12 "ID Manager based ID";
+CM_ SG_ 1313 Object_Class_12 "ObsIF:ObsType";
+CM_ SG_ 1313 OBJ_Width_12 "PHYSICAL STATES:PS_width";
+CM_ SG_ 1313 OBJ_Length_12 "PHYSICAL STATES:PS_length";
+CM_ SG_ 1313 Relative_Long_Velocity_12 "PHYSICAL STATES:PS_longRelSpeed";
+CM_ SG_ 1313 OBJ_Lane_Assignment_12 "LANE DATA:laneAssgoinment";
+CM_ SG_ 1313 Relative_Lat_Velocity_12 "PHYSICAL STATES:PS_latRelSpeed";
+CM_ SG_ 1314 Absolute_Long_Acc_12 " absoluteLongAcceleration 6.3.1.9";
+CM_ SG_ 1314 Long_Distance_12 "PHYSICAL STATES:PS_longDist";
+CM_ SG_ 1314 Lateral_Distance_12 "PHYSICAL STATES:PS_latDist";
+CM_ SG_ 1315 Absolute_Speed_12 "PHYSICAL STATES:PS_targetSpeed";
+CM_ SG_ 1315 OBJ_Motion_Status_12 "MOBILITY:Motion";
+CM_ SG_ 1315 OBJ_Motion_Category_12 "MOBILITY: movementCategory";
+CM_ SG_ 1315 Brake_Light_12 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1315 Turn_Indicator_Right_12 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1315 Turn_Indicator_Left_12 "This signal will only be valid when the object is the CIPV";
+CM_ SG_ 1315 Light_indicator_validity_12 "VLI_INFO:Valid";
+CM_ SG_ 1315 OBJ_Angle_Mid_12 "ANGULAR STATES: angleMid";
+CM_ SG_ 1315 OBJ_Angle_Rate_12 "6.3.6.3";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 1345 VD_CIPV_Lost 2 "LOST_TARGET_FOV_IN" 1 "LOST_TARGET_FOV_OUT" 0 "NO_LOSS" ;
+VAL_ 1345 OBJ_VD_Allow_Acc 2 "FREE_SPACE_UNKNOWN" 1 "SPACE_NOT_FREE" 0 "FREE_SPACE" ;
+VAL_ 1280 Object_Class_1 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1280 OBJ_Lane_Assignment_1 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1282 OBJ_Motion_Status_1 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1282 OBJ_Motion_Category_1 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1282 Brake_Light_1 1 "On" 0 "Off" ;
+VAL_ 1282 Turn_Indicator_Right_1 1 "On" 0 "Off" ;
+VAL_ 1282 Turn_Indicator_Left_1 1 "On" 0 "Off" ;
+VAL_ 1282 Light_indicator_validity_1 1 "True" 0 "False" ;
+VAL_ 1283 Object_Class_2 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1283 OBJ_Lane_Assignment_2 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1285 OBJ_Motion_Status_2 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1285 OBJ_Motion_Category_2 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1285 Brake_Light_2 1 "On" 0 "Off" ;
+VAL_ 1285 Turn_Indicator_Right_2 1 "On" 0 "Off" ;
+VAL_ 1285 Turn_Indicator_Left_2 1 "On" 0 "Off" ;
+VAL_ 1285 Light_indicator_validity_2 1 "True" 0 "False" ;
+VAL_ 1286 Object_Class_3 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1286 OBJ_Lane_Assignment_3 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1288 OBJ_Motion_Status_3 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1288 OBJ_Motion_Category_3 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1288 Brake_Light_3 1 "On" 0 "Off" ;
+VAL_ 1288 Turn_Indicator_Right_3 1 "On" 0 "Off" ;
+VAL_ 1288 Turn_Indicator_Left_3 1 "On" 0 "Off" ;
+VAL_ 1288 Light_indicator_validity_3 1 "True" 0 "False" ;
+VAL_ 1289 Object_Class_4 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1289 OBJ_Lane_Assignment_4 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1291 OBJ_Motion_Status_4 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1291 OBJ_Motion_Category_4 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1291 Brake_Light_4 1 "On" 0 "Off" ;
+VAL_ 1291 Turn_Indicator_Right_4 1 "On" 0 "Off" ;
+VAL_ 1291 Turn_Indicator_Left_4 1 "On" 0 "Off" ;
+VAL_ 1291 Light_indicator_validity_4 1 "True" 0 "False" ;
+VAL_ 1292 Object_Class_5 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1292 OBJ_Lane_Assignment_5 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1294 OBJ_Motion_Status_5 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1294 OBJ_Motion_Category_5 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1294 Brake_Light_5 1 "On" 0 "Off" ;
+VAL_ 1294 Turn_Indicator_Right_5 1 "On" 0 "Off" ;
+VAL_ 1294 Turn_Indicator_Left_5 1 "On" 0 "Off" ;
+VAL_ 1294 Light_indicator_validity_5 1 "True" 0 "False" ;
+VAL_ 1295 Object_Class_6 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1295 OBJ_Lane_Assignment_6 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1297 OBJ_Motion_Status_6 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1297 OBJ_Motion_Category_6 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1297 Brake_Light_6 1 "On" 0 "Off" ;
+VAL_ 1297 Turn_Indicator_Right_6 1 "On" 0 "Off" ;
+VAL_ 1297 Turn_Indicator_Left_6 1 "On" 0 "Off" ;
+VAL_ 1297 Light_indicator_validity_6 1 "True" 0 "False" ;
+VAL_ 1298 Object_Class_7 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1298 OBJ_Lane_Assignment_7 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1300 OBJ_Motion_Status_7 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1300 OBJ_Motion_Category_7 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1300 Brake_Light_7 1 "On" 0 "Off" ;
+VAL_ 1300 Turn_Indicator_Right_7 1 "On" 0 "Off" ;
+VAL_ 1300 Turn_Indicator_Left_7 1 "On" 0 "Off" ;
+VAL_ 1300 Light_indicator_validity_7 1 "True" 0 "False" ;
+VAL_ 1301 Object_Class_8 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1301 OBJ_Lane_Assignment_8 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1303 OBJ_Motion_Status_8 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1303 OBJ_Motion_Category_8 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1303 Brake_Light_8 1 "On" 0 "Off" ;
+VAL_ 1303 Turn_Indicator_Right_8 1 "On" 0 "Off" ;
+VAL_ 1303 Turn_Indicator_Left_8 1 "On" 0 "Off" ;
+VAL_ 1303 Light_indicator_validity_8 1 "True" 0 "False" ;
+VAL_ 1304 Object_Class_9 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1304 OBJ_Lane_Assignment_9 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1306 OBJ_Motion_Status_9 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1306 OBJ_Motion_Category_9 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1306 Brake_Light_9 1 "On" 0 "Off" ;
+VAL_ 1306 Turn_Indicator_Right_9 1 "On" 0 "Off" ;
+VAL_ 1306 Turn_Indicator_Left_9 1 "On" 0 "Off" ;
+VAL_ 1306 Light_indicator_validity_9 1 "True" 0 "False" ;
+VAL_ 1307 Object_Class_10 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1307 OBJ_Lane_Assignment_10 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1309 OBJ_Motion_Status_10 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1309 OBJ_Motion_Category_10 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1309 Brake_Light_10 1 "On" 0 "Off" ;
+VAL_ 1309 Turn_Indicator_Right_10 1 "On" 0 "Off" ;
+VAL_ 1309 Turn_Indicator_Left_10 1 "On" 0 "Off" ;
+VAL_ 1309 Light_indicator_validity_10 1 "True" 0 "False" ;
+VAL_ 1310 Object_Class_11 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1310 OBJ_Lane_Assignment_11 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1312 OBJ_Motion_Status_11 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1312 OBJ_Motion_Category_11 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1312 Brake_Light_11 1 "On" 0 "Off" ;
+VAL_ 1312 Turn_Indicator_Right_11 1 "On" 0 "Off" ;
+VAL_ 1312 Turn_Indicator_Left_11 1 "On" 0 "Off" ;
+VAL_ 1312 Light_indicator_validity_11 1 "True" 0 "False" ;
+VAL_ 1313 Object_Class_12 7 "uncertain_vcl " 6 "animal" 5 "general_object" 4 "pedestrian" 3 "bicycle" 2 "bike" 1 "truck" 0 "car" ;
+VAL_ 1313 OBJ_Lane_Assignment_12 5 "Not assigned" 4 "Next Right Lane" 3 "Right Lane" 2 "Ego Lane" 1 "Left Lane" 0 "Next Left Lane" ;
+VAL_ 1315 OBJ_Motion_Status_12 4 "Moving Slowly" 3 "Stopped" 2 "Stationary" 1 "Moving" 0 "Unknown" ;
+VAL_ 1315 OBJ_Motion_Category_12 12 "MC_ONCOMING" 11 "MC_PRECEEDING" 10 "MC_MOVING" 9 "MC_RTAP" 8 "MC_LTAP" 7 "MC_CROSSING" 6 "MC_MOVING_OUT" 5 "MC_MOVING_IN" 4 "MC_CLOSE_CUT_IN" 3 "MC_PASSING_OUT" 2 "MC_PASSING_IN" 1 "MC_PASSING" 0 "MC_UNDEFINED" ;
+VAL_ 1315 Brake_Light_12 1 "On" 0 "Off" ;
+VAL_ 1315 Turn_Indicator_Right_12 1 "On" 0 "Off" ;
+VAL_ 1315 Turn_Indicator_Left_12 1 "On" 0 "Off" ;
+VAL_ 1315 Light_indicator_validity_12 1 "True" 0 "False" ;
+

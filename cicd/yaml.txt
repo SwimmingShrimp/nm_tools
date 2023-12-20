@@ -1,0 +1,72 @@
+variables:
+  PROJECT_ROOT_PATH: "/home/lixialin/CI/perception"
+  SAVE_ROOT_PATH: "/home/lixialin/CI/perception_result"
+  RESULT_ROOT_PATH: "/home/lixialin/CI/perception_result/system_result"
+  SMOKE_NORMAL_ROOT_PATH: "/home/lixialin/CI/perception_result/smoke_front_side_back_result"
+  SMOKE_FISHEYE_ROOT_PATH: "/home/lixialin/CI/perception_result/smoke_fisheye_result"
+  SYSTEM_NORMAL_ROOT_PATH: "/home/lixialin/CI/perception_result/system_front_side_back_result"
+  SYSTEM_FISHEYE_ROOT_PATH: "/home/lixialin/CI/perception_result/system_fisheye_result"
+  QNX_ROOT: "/home/lixialin/文档/mona/qnx710"
+  IPU_ROOT: "/home/lixialin/文档/mona/ipu04_soc_qnx"
+  PROCESS_ROOT: "/home/lixialin/CI/perception_scripts"
+  VERSION_NAME: "orin_perception_$CI_COMMIT_SHORT_SHA"
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+stages:
+  - build
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  tags:
+    - perception
+  script:
+    - echo "Build Begin"
+    - echo "COMMIT_SHORT_SHA:$CI_COMMIT_SHORT_SHA"
+    - echo "合并请求源分支：$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
+    - echo "合并请求目标分支：$CI_MEGE_REQUEST_TARGET_BRANCH_NAME"
+    - echo "版本名称：$VERSION_NAME"
+    - git config --global --add safe.directory $PROJECT_ROOT_PATH
+    - cd $PROJECT_ROOT_PATH
+    - git checkout L4_dev
+    - git branch -D $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    - git checkout -b $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME origin/$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    - git pull 
+    - rm -r compiler
+    - mkdir compiler  
+    - cd compiler  
+    - ln -s $QNX_ROOT ./qnx710  
+    - cd ../
+    - rm -r sdk
+    - mkdir sdk  
+    - cd sdk  
+    - ln -s $IPU_ROOT ./ipu04_soc_qnx
+    - cd $PROJECT_ROOT_PATH
+    - ./scripts/package_ci.sh $VERSION_NAME
+    - echo "Build Finish"
+  after_script:
+    - cd $PROCESS_ROOT
+    - python ./mail_build.py $CI_JOB_STATUS $CI_COMMIT_AUTHOR $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+test-smoke:
+  stage: test
+  tags:
+    - perception
+  script:
+    - echo "冒烟测试+系统测试+benchmark"
+    - cd $PROCESS_ROOT
+    - expect excute_process.sh $PROJECT_ROOT_PATH $VERSION_NAME
+    - expect get_result.sh
+get-test-result:
+  stage: deploy
+  tags:
+    - perception
+  script:
+    - cd $PROCESS_ROOT
+    - python ./mail.py $CI_COMMIT_AUTHOR $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    - mv ../perception_result/result ../perception_result/$VERSION_NAME
+    - rm -r ../perception/$VERSION_NAME 
+    - rm -r ../perception/$VERSION_NAME.zip

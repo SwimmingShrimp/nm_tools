@@ -1,0 +1,98 @@
+VERSION "2"
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+BO_ 1680 Fail_Safes: 8 Vector__XXX
+ SG_ Protocol_Version : 0|8@1+ (1,0) [2|2] "NA" Vector__XXX
+ SG_ Sync_Frame_Index : 8|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ FS_Free_Sight : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ FS_Rain : 17|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Fog : 20|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Splashes : 23|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Sun_Ray : 26|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Low_Sun : 29|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Blur_Image : 32|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Partial_Blockage : 35|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Full_Blockage : 38|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Frozen_Windshield : 41|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Out_Of_Calib : 44|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_Out_Of_Focus : 47|3@1+ (1,0) [0|5] "ENUM" Vector__XXX
+ SG_ FS_TSR_Out_OF_Calib : 50|8@1+ (1,0) [0|8] "BITWIZE" Vector__XXX
+ SG_ Reserved : 58|6@1+ (1,0) [0|0] "NA" Vector__XXX
+
+CM_ SG_ 1680 Protocol_Version "Version number of the failsafe message";
+CM_ SG_ 1680 Sync_Frame_Index "sync ID to be used to sync between signals in the system";
+CM_ SG_ 1680 FS_Free_Sight "The FOV is split to 6 different regions. Once an object (Lanes/ VD/ PED/ TSR) is detected in every one of the regions the freeSight signal is set to true.";
+CM_ SG_ 1680 FS_Rain "Detection of rain or similar precipitation";
+CM_ SG_ 1680 FS_Fog "Detection of fog";
+CM_ SG_ 1680 FS_Splashes "We cannot detect the lower edges of vehicles due to water spray aka splashes";
+CM_ SG_ 1680 FS_Sun_Ray "A strong glare due to micro scratches on the windshield";
+CM_ SG_ 1680 FS_Low_Sun "Sun glare which disrupts the image. The sun appears over the FOE";
+CM_ SG_ 1680 FS_Blur_Image "Issued when visibility on the image is lowered such that detection of objects inside the Danger Zone (in-path and next lanes up-to some level) can't be fully performed.";
+CM_ SG_ 1680 FS_Partial_Blockage "Low visibility due to partially covered lens.";
+CM_ SG_ 1680 FS_Full_Blockage "Takes 50 frames with no edges. Recovery is very quick (max 50 frames). Will be on when standing at night with no headlights.";
+CM_ SG_ 1680 FS_Frozen_Windshield "Significant failsafe indicating the windshield is frozen and this will impact all technologies";
+CM_ SG_ 1680 FS_Out_Of_Calib "The vision detected that the calibration is wrong (Auto Fix)";
+CM_ SG_ 1680 FS_Out_Of_Focus "The vision detected that the focus calibration is wrong ";
+CM_ SG_ 1680 FS_TSR_Out_OF_Calib "Specific TSR Out Of Calib Signal";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 1680 FS_Free_Sight 1 "TRUE" 0 "FALSE" ;
+VAL_ 1680 FS_Rain 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Fog 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Splashes 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Sun_Ray 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Low_Sun 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Blur_Image 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Partial_Blockage 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Full_Blockage 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Frozen_Windshield 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Out_Of_Calib 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_Out_Of_Focus 5 "99" 4 "75" 3 "50" 2 "25" 1 "NONE" 0 "NOT_READY" ;
+VAL_ 1680 FS_TSR_Out_OF_Calib 8 "TSR_OUT_OF_CALIB_HORIZON" 4 "TSR_OUT_OF_CALIB_YAW" 2 " TSR_OUT_OF_CALIB_AEB" 1 "TSR_OUT_OF_CALIB" 0 "NONE" ;
+

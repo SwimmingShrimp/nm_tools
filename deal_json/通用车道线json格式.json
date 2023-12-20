@@ -1,0 +1,214 @@
+{
+    "task_lane": [
+        {
+            "position": "ego-left",
+            "type": "dash-lane",
+            "color": "white",
+            "ignore": "true",#是否忽略true/false
+            "point": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    4,
+                    1
+                ],
+                [
+                    6,
+                    6,
+                    1
+                ]
+            ],
+            "woven_lane": [
+                "1"
+            ],
+            "noparking": [],
+            "stoplane": [
+                "3"   
+            ],
+            "arrow": [
+                "1"
+            ]
+        }
+    ],
+    "task_woven": [
+        {
+            "index": "1",
+            "ignore": "false",#是否忽略true/false
+            "start_point": [
+                10,
+                2,
+                1
+            ],
+            "end_point": [
+                20,
+                2,
+                1
+            ]
+        }
+    ],
+    "task_noparking": [
+        {
+            "index": "1",
+            "ignore": "false",#是否忽略true/false
+            "point": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    4,
+                    1
+                ],
+                [
+                    6,
+                    6,
+                    1
+                ]
+            ]
+        }
+    ],
+    "task_arrow": [
+        {
+            "index": "1",
+            "ignore": "false",#是否忽略true/false
+            "class": "straight-arrow",
+            "point": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    4,
+                    1
+                ],
+                [
+                    6,
+                    6,
+                    1
+                ]
+            ]
+        },
+        {
+            "index": "2",
+            "class": "left-arrow",
+            "ignore": "false",#是否忽略true/false
+            "point": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    4,
+                    1
+                ],
+                [
+                    6,
+                    6,
+                    1
+                ]
+            ]
+        }
+    ],
+    "task_stoplane": [
+        {
+        "index": "3",
+        "ignore": "false",#是否忽略true/false
+        "point": [
+            [
+                1,
+                2,
+                3
+            ],
+            [
+                2,
+                2,
+                2
+            ]
+        ]
+        }
+    ],
+    "task_roadedge": [
+        {
+            "position": "left-road-edge",
+            "type": "temporary",
+            "ignore": "false",#是否忽略，true/false
+            "point": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    4,
+                    1
+                ],
+                [
+                    6,
+                    6,
+                    1
+                ]
+            ]
+        }
+    ]
+}
