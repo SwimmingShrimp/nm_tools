@@ -67,7 +67,7 @@ def analyze_ros_2_json(rosbag_file,ros_2_jsons_path):
     # 根据SLAM的结果的时间取odom最近时间戳
     odom_new = []
     for idx,msg in enumerate(slampose):
-        diff = abs(slampose[0][0] - odom[0][0])
+        diff = abs(slampose[idx][0] - odom[0][0])
         new_idx = idx
         for i in range(len(odom)):
             diff_new = abs(slampose[idx][0] - odom[i][0])
@@ -78,7 +78,7 @@ def analyze_ros_2_json(rosbag_file,ros_2_jsons_path):
     # 根据SLAM的结果的时间取whlspd最近时间戳
     whlspd_new = []
     for idx,msg in enumerate(slampose):
-        diff = abs(slampose[0][0] - whlspd[0][0])
+        diff = abs(slampose[idx][0] - whlspd[0][0])
         new_idx = idx
         for i in range(len(whlspd)):
             diff_new = abs(slampose[idx][0] - whlspd[i][0])
