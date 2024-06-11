@@ -1,0 +1,857 @@
+VERSION "8.0-(wbtl)2.0"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: WBTL
+
+
+BO_ 624 VisionLaneInfo: 3 WBTL
+ SG_ EstimatedLaneWidth_Ego : 4|12@1+ (0.005,0) [0|20.475] "m" Vector__XXX
+ SG_ VisionRollingCount_VisionLane : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 549 RoadEdge_FrontRight_B: 8 WBTL
+ SG_ RoadEdgeViewRangeStart_FR : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ RoadEdgeHeadAngle_FR : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ RoadEdgeViewRangeEnd_FR : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ RoadEdgeModelDerivA_FR : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 548 RoadEdge_FrontRight_A: 8 WBTL
+ SG_ RoadEdgeAvailability_FR : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RoadEdgeType_FR : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ RoadEdgeQuality_FR : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RoadEdgePosition_FR : 8|15@1- (0.00390625,0) [-64|63.99609375] "" Vector__XXX
+ SG_ RoadEdgeModelA_FR : 24|31@1+ (2.3283064E-010,-0.25) [-0.25|0.249999991920544] "1/m" Vector__XXX
+
+BO_ 545 RoadEdge_FrontLeft_B: 8 WBTL
+ SG_ RoadEdgeViewRangeStart_FL : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ RoadEdgeHeadAngle_FL : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ RoadEdgeViewRangeEnd_FL : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ RoadEdgeModelDerivA_FL : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 544 RoadEdge_FrontLeft_A: 8 WBTL
+ SG_ RoadEdgeAvailability_FL : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RoadEdgeType_FL : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ RoadEdgeQuality_FL : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RoadEdgePosition_FL : 8|15@1- (0.00390625,0) [-64|63.99609375] "" Vector__XXX
+ SG_ RoadEdgeModelA_FL : 24|31@1+ (2.3283064E-010,-0.25) [-0.25|0.249999991920544] "1/m" Vector__XXX
+
+BO_ 1024 Object_Target: 8 WBTL
+ SG_ ObjectCipv_ID_FR : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectCipv_ID_FL : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectCipv_ID_FE : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VisionRollingCount_Target : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 672 VisionFailSafe: 8 WBTL
+ SG_ FS_LowSun : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FS_FullBlockage : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VisionRollingCount_VisionFS : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 640 VisionGeneral_01: 8 WBTL
+ SG_ Vision_Rx_YawRate : 24|14@1- (0.01,0) [-81.92|81.91] "deg/s" Vector__XXX
+ SG_ Vision_Rx_VehSpd : 8|16@1+ (0.01,0) [0|655.35] "km/h" Vector__XXX
+ SG_ VisionRollingCount_VisionGeneral : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1185 VisionClock2: 6 WBTL
+ SG_ RollingCount_VisionClock2 : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VisionMsgTimestamp : 0|40@1+ (0.001,946684800) [946684800|2046196427.775] "sec" Vector__XXX
+
+BO_ 860 Object_Data_E_12: 8 WBTL
+ SG_ ObjectAbsAccelY_E_12 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_12 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_12 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_12 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_12 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 852 Object_Data_E_11: 8 WBTL
+ SG_ ObjectAbsAccelY_E_11 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_11 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_11 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_11 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_11 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 844 Object_Data_E_10: 8 WBTL
+ SG_ ObjectAbsAccelY_E_10 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_10 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_10 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_10 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_10 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 836 Object_Data_E_09: 8 WBTL
+ SG_ ObjectAbsAccelY_E_09 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_09 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_09 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_09 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_09 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 828 Object_Data_E_08: 8 WBTL
+ SG_ ObjectAbsAccelY_E_08 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_08 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_08 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_08 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_08 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 820 Object_Data_E_07: 8 WBTL
+ SG_ ObjectAbsAccelY_E_07 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_07 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_07 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_07 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_07 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 812 Object_Data_E_06: 8 WBTL
+ SG_ ObjectAbsAccelY_E_06 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_06 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_06 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_06 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_06 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 804 Object_Data_E_05: 8 WBTL
+ SG_ ObjectAbsAccelY_E_05 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_05 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_05 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_05 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_05 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 796 Object_Data_E_04: 8 WBTL
+ SG_ ObjectAbsAccelY_E_04 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_04 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_04 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_04 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_04 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 788 Object_Data_E_03: 8 WBTL
+ SG_ ObjectAbsAccelY_E_03 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_03 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_03 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_03 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_03 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 780 Object_Data_E_02: 8 WBTL
+ SG_ ObjectAbsAccelY_E_02 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_02 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_02 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_02 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_02 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 772 Object_Data_E_01: 8 WBTL
+ SG_ ObjectAbsAccelY_E_01 : 35|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsAccelX_E_01 : 24|11@1- (0.01,0) [-10.24|10.23] "m/s^2" Vector__XXX
+ SG_ ObjectAbsVelY_E_01 : 55|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ ObjectAbsVelX_E_01 : 46|9@1+ (0.1,0) [0|51.1] "m/s" Vector__XXX
+ SG_ VisionRollingCount_E_01 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1184 VisionClock1: 6 WBTL
+ SG_ RollingCount_VisionClock1 : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ TimestampCameraID : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ImageCaptureTimestamp : 0|40@1+ (0.001,946684800) [946684800|2046196427.775] "sec" Vector__XXX
+
+BO_ 858 Object_Data_C_12: 8 WBTL
+ SG_ VisionRollingCount_C_12 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_12 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 857 Object_Data_B_12: 8 WBTL
+ SG_ VisionRollingCount_B_12 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_12 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_12 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_12 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_12 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_12 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 856 Object_Data_A_12: 8 WBTL
+ SG_ VisionRollingCount_A_12 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_12 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_12 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_12 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_12 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_12 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_12 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_12 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_12 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 850 Object_Data_C_11: 8 WBTL
+ SG_ VisionRollingCount_C_11 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_11 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 849 Object_Data_B_11: 8 WBTL
+ SG_ VisionRollingCount_B_11 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_11 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_11 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_11 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_11 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_11 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 848 Object_Data_A_11: 8 WBTL
+ SG_ VisionRollingCount_A_11 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_11 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_11 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_11 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_11 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_11 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_11 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_11 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_11 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 842 Object_Data_C_10: 8 WBTL
+ SG_ VisionRollingCount_C_10 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_10 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 841 Object_Data_B_10: 8 WBTL
+ SG_ VisionRollingCount_B_10 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_10 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_10 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_10 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_10 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_10 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 840 Object_Data_A_10: 8 WBTL
+ SG_ VisionRollingCount_A_10 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_10 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_10 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_10 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_10 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_10 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_10 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_10 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_10 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 834 Object_Data_C_09: 8 WBTL
+ SG_ VisionRollingCount_C_09 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_09 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 833 Object_Data_B_09: 8 WBTL
+ SG_ VisionRollingCount_B_09 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_09 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_09 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_09 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_09 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_09 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 832 Object_Data_A_09: 8 WBTL
+ SG_ VisionRollingCount_A_09 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_09 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_09 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_09 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_09 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_09 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_09 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_09 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_09 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 826 Object_Data_C_08: 8 WBTL
+ SG_ VisionRollingCount_C_08 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_08 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 825 Object_Data_B_08: 8 WBTL
+ SG_ VisionRollingCount_B_08 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_08 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_08 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_08 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_08 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_08 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 824 Object_Data_A_08: 8 WBTL
+ SG_ VisionRollingCount_A_08 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_08 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_08 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_08 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_08 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_08 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_08 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_08 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_08 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 818 Object_Data_C_07: 8 WBTL
+ SG_ VisionRollingCount_C_07 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_07 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 817 Object_Data_B_07: 8 WBTL
+ SG_ VisionRollingCount_B_07 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_07 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_07 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_07 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_07 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_07 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 816 Object_Data_A_07: 8 WBTL
+ SG_ VisionRollingCount_A_07 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_07 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_07 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_07 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_07 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_07 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_07 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_07 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_07 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 810 Object_Data_C_06: 8 WBTL
+ SG_ VisionRollingCount_C_06 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_06 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 809 Object_Data_B_06: 8 WBTL
+ SG_ VisionRollingCount_B_06 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_06 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_06 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_06 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_06 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_06 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 808 Object_Data_A_06: 8 WBTL
+ SG_ VisionRollingCount_A_06 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_06 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_06 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_06 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_06 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_06 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_06 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_06 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_06 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 802 Object_Data_C_05: 8 WBTL
+ SG_ VisionRollingCount_C_05 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_05 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 801 Object_Data_B_05: 8 WBTL
+ SG_ VisionRollingCount_B_05 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_05 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_05 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_05 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_05 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_05 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 800 Object_Data_A_05: 8 WBTL
+ SG_ VisionRollingCount_A_05 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_05 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_05 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_05 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_05 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_05 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_05 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_05 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_05 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 794 Object_Data_C_04: 8 WBTL
+ SG_ VisionRollingCount_C_04 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_04 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 793 Object_Data_B_04: 8 WBTL
+ SG_ VisionRollingCount_B_04 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_04 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_04 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_04 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_04 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_04 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 792 Object_Data_A_04: 8 WBTL
+ SG_ VisionRollingCount_A_04 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_04 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_04 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_04 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_04 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_04 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_04 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_04 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_04 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 786 Object_Data_C_03: 8 WBTL
+ SG_ VisionRollingCount_C_03 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_03 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 785 Object_Data_B_03: 8 WBTL
+ SG_ VisionRollingCount_B_03 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_03 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_03 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_03 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_03 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_03 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 784 Object_Data_A_03: 8 WBTL
+ SG_ VisionRollingCount_A_03 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_03 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_03 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_03 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_03 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_03 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_03 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_03 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_03 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 778 Object_Data_C_02: 8 WBTL
+ SG_ VisionRollingCount_C_02 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_02 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 777 Object_Data_B_02: 8 WBTL
+ SG_ VisionRollingCount_B_02 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_02 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_02 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_02 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_02 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_02 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 776 Object_Data_A_02: 8 WBTL
+ SG_ VisionRollingCount_A_02 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_02 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_02 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_02 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_02 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_02 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_02 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_02 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_02 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 770 Object_Data_C_01: 8 WBTL
+ SG_ VisionRollingCount_C_01 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectOrientation_C_01 : 38|11@1- (0.18,0) [-184.32|184.14] "deg" Vector__XXX
+
+BO_ 769 Object_Data_B_01: 8 WBTL
+ SG_ VisionRollingCount_B_01 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelAccelX_B_01 : 4|12@1- (0.01,0) [-20.48|20.47] "m/s^2" Vector__XXX
+ SG_ ObjectRelVelX_B_01 : 16|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectRelVelY_B_01 : 27|11@1- (0.1,0) [-102.4|102.3] "m/s" Vector__XXX
+ SG_ ObjectLength_B_01 : 38|10@1+ (0.05,0) [0|51.15] "m" Vector__XXX
+ SG_ ObjectWidth_B_01 : 56|8@1+ (0.05,0) [0|12.75] "m" Vector__XXX
+
+BO_ 768 Object_Data_A_01: 8 WBTL
+ SG_ VisionRollingCount_A_01 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectRelPosX_A_01 : 4|12@1+ (0.1,-100) [-100|309.5] "m" Vector__XXX
+ SG_ ObjectRelPosY_A_01 : 16|12@1- (0.05,0) [-102.4|102.35] "m" Vector__XXX
+ SG_ ObjectLane_A_01 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectIdentifier_A_01 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObjectAge_A_01 : 40|7@1+ (0.1,0) [0|12.7] "s" Vector__XXX
+ SG_ ObjectValidity_A_01 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObjectType_A_01 : 58|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ObjectConfidence_A_01 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 525 Lane_FrontRightNext_B: 8 WBTL
+ SG_ LaneMarkViewRangeStart_FRN : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ LaneMarkHeadAngle_FRN : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ LaneMarkViewRangeEnd_FRN : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ LaneMarkModelDerivA_FRN : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 524 Lane_FrontRightNext_A: 8 WBTL
+ SG_ LaneMarkAvailability_FRN : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkDecel_FRN : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkCrossing_FRN : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LaneMarkType_FRN : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LaneMarkQuality_FRN : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkColor_FRN : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LaneMarkPosition_FRN : 11|13@1- (0.00390625,0) [-16|15.99609375] "" Vector__XXX
+ SG_ LaneMarkModelA_FRN : 24|30@1+ (2.3283064E-010,-0.125) [-0.125|0.124999995843857] "1/m" Vector__XXX
+ SG_ LaneMarkWidth_FRN : 56|6@1+ (0.02,0) [0|1.26] "" Vector__XXX
+
+BO_ 521 Lane_FrontLeftNext_B: 8 WBTL
+ SG_ LaneMarkViewRangeStart_FLN : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ LaneMarkHeadAngle_FLN : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ LaneMarkViewRangeEnd_FLN : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ LaneMarkModelDerivA_FLN : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 520 Lane_FrontLeftNext_A: 8 WBTL
+ SG_ LaneMarkAvailability_FLN : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkDecel_FLN : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkCrossing_FLN : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LaneMarkType_FLN : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LaneMarkQuality_FLN : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkColor_FLN : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LaneMarkPosition_FLN : 11|13@1- (0.00390625,0) [-16|15.99609375] "" Vector__XXX
+ SG_ LaneMarkModelA_FLN : 24|30@1+ (2.3283064E-010,-0.125) [-0.125|0.124999995843857] "1/m" Vector__XXX
+ SG_ LaneMarkWidth_FLN : 56|6@1+ (0.02,0) [0|1.26] "" Vector__XXX
+
+BO_ 517 Lane_FrontRight_B: 8 WBTL
+ SG_ LaneMarkViewRangeStart_FR : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ LaneMarkHeadAngle_FR : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ LaneMarkViewRangeEnd_FR : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ LaneMarkModelDerivA_FR : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 516 Lane_FrontRight_A: 8 WBTL
+ SG_ LaneMarkAvailability_FR : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkDecel_FR : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkCrossing_FR : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LaneMarkType_FR : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LaneMarkQuality_FR : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkColor_FR : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LaneMarkPosition_FR : 11|13@1- (0.00390625,0) [-16|15.99609375] "" Vector__XXX
+ SG_ LaneMarkModelA_FR : 24|30@1+ (2.3283064E-010,-0.125) [-0.125|0.124999995843857] "1/m" Vector__XXX
+ SG_ LaneMarkWidth_FR : 56|6@1+ (0.02,0) [0|1.26] "" Vector__XXX
+
+BO_ 513 Lane_FrontLeft_B: 8 WBTL
+ SG_ LaneMarkViewRangeStart_FL : 25|7@1+ (0.5,0) [0|63.5] "m" Vector__XXX
+ SG_ LaneMarkHeadAngle_FL : 0|16@1+ (1.52588E-005,-0.5) [-0.5|0.499985458] "" Vector__XXX
+ SG_ LaneMarkViewRangeEnd_FL : 16|9@1+ (0.5,0) [0|255.5] "" Vector__XXX
+ SG_ LaneMarkModelDerivA_FL : 32|32@1+ (1.45519E-011,-0.03125) [-0.03125|0.0312499345801105] "1/m^2" Vector__XXX
+
+BO_ 512 Lane_FrontLeft_A: 8 WBTL
+ SG_ LaneMarkAvailability_FL : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkDecel_FL : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkCrossing_FL : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LaneMarkType_FL : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LaneMarkQuality_FL : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneMarkColor_FL : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LaneMarkPosition_FL : 11|13@1- (0.00390625,0) [-16|15.99609375] "" Vector__XXX
+ SG_ LaneMarkModelA_FL : 24|30@1+ (2.3283064E-010,-0.125) [-0.125|0.124999995843857] "1/m" Vector__XXX
+ SG_ LaneMarkWidth_FL : 56|6@1+ (0.02,0) [0|1.26] "" Vector__XXX
+
+
+
+CM_ BO_ 624 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ BO_ 549 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 549 RoadEdgeViewRangeStart_FR "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 549 RoadEdgeHeadAngle_FR "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 549 RoadEdgeViewRangeEnd_FR "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 549 RoadEdgeModelDerivA_FR "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 548 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 548 RoadEdgePosition_FR "-: left / +: right";
+CM_ SG_ 548 RoadEdgeModelA_FR "-: left turn / +: right turn";
+CM_ BO_ 545 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 545 RoadEdgeViewRangeStart_FL "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 545 RoadEdgeHeadAngle_FL "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 545 RoadEdgeViewRangeEnd_FL "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 545 RoadEdgeModelDerivA_FL "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 544 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 544 RoadEdgePosition_FL "-: left / +: right";
+CM_ SG_ 544 RoadEdgeModelA_FL "-: left turn / +: right turn";
+CM_ BO_ 1024 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 672 "Sender:PhantomVision / Receiver: PhantomFusion, PhantomDrive";
+CM_ BO_ 640 "Sender:PhantomVision / Receiver: PhantomFusion, PhantomDrive";
+CM_ BO_ 1185 "Sender:PhantomVision / Receiver: PhantomFusion, PhantomDrive";
+CM_ SG_ 1185 VisionMsgTimestamp "Epoch seconds but with local timezone.  Minimum representable time is Jan 1, 2000.  Maximum representable time is Nov 3, 2034.";
+CM_ BO_ 860 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 852 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 844 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 836 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 828 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 820 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 812 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 804 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 796 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 788 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 780 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 772 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ BO_ 1184 "Sender:PhantomVision / Receiver: PhantomFusion, PhantomDrive";
+CM_ SG_ 1184 ImageCaptureTimestamp "Epoch seconds but with local timezone.  Minimum representable time is Jan 1, 2000.  Maximum representable time is Nov 3, 2034.";
+CM_ BO_ 858 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 858 ObjectOrientation_C_12 "+: CCW / -: CW";
+CM_ BO_ 857 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 857 ObjectRelAccelX_B_12 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 857 ObjectRelVelX_B_12 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 857 ObjectRelVelY_B_12 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 856 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 856 ObjectRelPosX_A_12 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 856 ObjectRelPosY_A_12 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 850 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 850 ObjectOrientation_C_11 "+: CCW / -: CW";
+CM_ BO_ 849 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 849 ObjectRelAccelX_B_11 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 849 ObjectRelVelX_B_11 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 849 ObjectRelVelY_B_11 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 848 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 848 ObjectRelPosX_A_11 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 848 ObjectRelPosY_A_11 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 842 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 842 ObjectOrientation_C_10 "+: CCW / -: CW";
+CM_ BO_ 841 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 841 ObjectRelAccelX_B_10 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 841 ObjectRelVelX_B_10 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 841 ObjectRelVelY_B_10 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 840 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 840 ObjectRelPosX_A_10 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 840 ObjectRelPosY_A_10 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 834 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 834 ObjectOrientation_C_09 "+: CCW / -: CW";
+CM_ BO_ 833 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 833 ObjectRelAccelX_B_09 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 833 ObjectRelVelX_B_09 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 833 ObjectRelVelY_B_09 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 832 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 832 ObjectRelPosX_A_09 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 832 ObjectRelPosY_A_09 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 826 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 826 ObjectOrientation_C_08 "+: CCW / -: CW";
+CM_ BO_ 825 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 825 ObjectRelAccelX_B_08 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 825 ObjectRelVelX_B_08 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 825 ObjectRelVelY_B_08 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 824 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 824 ObjectRelPosX_A_08 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 824 ObjectRelPosY_A_08 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 818 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 818 ObjectOrientation_C_07 "+: CCW / -: CW";
+CM_ BO_ 817 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 817 ObjectRelAccelX_B_07 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 817 ObjectRelVelX_B_07 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 817 ObjectRelVelY_B_07 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 816 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 816 ObjectRelPosX_A_07 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 816 ObjectRelPosY_A_07 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 810 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 810 ObjectOrientation_C_06 "+: CCW / -: CW";
+CM_ BO_ 809 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 809 ObjectRelAccelX_B_06 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 809 ObjectRelVelX_B_06 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 809 ObjectRelVelY_B_06 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 808 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 808 ObjectRelPosX_A_06 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 808 ObjectRelPosY_A_06 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 802 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 802 ObjectOrientation_C_05 "+: CCW / -: CW";
+CM_ BO_ 801 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 801 ObjectRelAccelX_B_05 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 801 ObjectRelVelX_B_05 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 801 ObjectRelVelY_B_05 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 800 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 800 ObjectRelPosX_A_05 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 800 ObjectRelPosY_A_05 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 794 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 794 ObjectOrientation_C_04 "+: CCW / -: CW";
+CM_ BO_ 793 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 793 ObjectRelAccelX_B_04 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 793 ObjectRelVelX_B_04 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 793 ObjectRelVelY_B_04 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 792 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 792 ObjectRelPosX_A_04 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 792 ObjectRelPosY_A_04 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 786 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 786 ObjectOrientation_C_03 "+: CCW / -: CW";
+CM_ BO_ 785 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 785 ObjectRelAccelX_B_03 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 785 ObjectRelVelX_B_03 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 785 ObjectRelVelY_B_03 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 784 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 784 ObjectRelPosX_A_03 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 784 ObjectRelPosY_A_03 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 778 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 778 ObjectOrientation_C_02 "+: CCW / -: CW";
+CM_ BO_ 777 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 777 ObjectRelAccelX_B_02 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 777 ObjectRelVelX_B_02 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 777 ObjectRelVelY_B_02 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 776 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 776 ObjectRelPosX_A_02 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 776 ObjectRelPosY_A_02 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 770 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 770 ObjectOrientation_C_01 "+: CCW / -: CW";
+CM_ BO_ 769 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 769 ObjectRelAccelX_B_01 "ObjectRelAccelX = longitudinal acceleration of object - longitudinal acceleration of ego vehicle";
+CM_ SG_ 769 ObjectRelVelX_B_01 "ObjectRelVelX = longitudinal velocity of object - longitudinal velocity of ego vehicle";
+CM_ SG_ 769 ObjectRelVelY_B_01 "ObjectRelVelY = lateral velocity of object - lateral velocity of ego vehicle";
+CM_ BO_ 768 "Sender:PhantomVision / Receiver: PhantomFusion";
+CM_ SG_ 768 ObjectRelPosX_A_01 "longitudinal distance from rear axle center of the ego vehicle. +: front / -: rear";
+CM_ SG_ 768 ObjectRelPosY_A_01 "lateral distance from longitudinal center line of the ego vehicle. +: left / -: right";
+CM_ BO_ 525 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 525 LaneMarkViewRangeStart_FRN "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 525 LaneMarkHeadAngle_FRN "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 525 LaneMarkViewRangeEnd_FRN "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 525 LaneMarkModelDerivA_FRN "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 524 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 524 LaneMarkPosition_FRN "-: left / +: right";
+CM_ SG_ 524 LaneMarkModelA_FRN "-: left turn / +: right turn";
+CM_ BO_ 521 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 521 LaneMarkViewRangeStart_FLN "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 521 LaneMarkHeadAngle_FLN "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 521 LaneMarkViewRangeEnd_FLN "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 521 LaneMarkModelDerivA_FLN "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 520 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 520 LaneMarkPosition_FLN "-: left / +: right";
+CM_ SG_ 520 LaneMarkModelA_FLN "-: left turn / +: right turn";
+CM_ BO_ 517 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 517 LaneMarkViewRangeStart_FR "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 517 LaneMarkHeadAngle_FR "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 517 LaneMarkViewRangeEnd_FR "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 517 LaneMarkModelDerivA_FR "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 516 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 516 LaneMarkPosition_FR "-: left / +: right";
+CM_ SG_ 516 LaneMarkModelA_FR "-: left turn / +: right turn";
+CM_ BO_ 513 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 513 LaneMarkViewRangeStart_FL "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 513 LaneMarkHeadAngle_FL "-: curve leftward or lane change to right  / +: curve rightward or lane change to left";
+CM_ SG_ 513 LaneMarkViewRangeEnd_FL "longitudinal distance from rear axle center of the ego vehicle";
+CM_ SG_ 513 LaneMarkModelDerivA_FL "-: left curve entry or right curve exit / +: right curve entry or left curve exit";
+CM_ BO_ 512 "Sender:PhantomVision / Receiver: PhantomDrive";
+CM_ SG_ 512 LaneMarkPosition_FL "-: left / +: right";
+CM_ SG_ 512 LaneMarkModelA_FL "-: left turn / +: right turn";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 2000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 50;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_ "GenMsgSendType" BO_ 624 0;
+BA_ "GenMsgSendType" BO_ 549 0;
+BA_ "GenMsgSendType" BO_ 548 0;
+BA_ "GenMsgSendType" BO_ 545 0;
+BA_ "GenMsgSendType" BO_ 544 0;
+BA_ "GenMsgSendType" BO_ 1024 0;
+BA_ "GenMsgSendType" BO_ 672 0;
+BA_ "GenMsgSendType" BO_ 640 0;
+BA_ "GenMsgSendType" BO_ 1185 0;
+BA_ "GenMsgSendType" BO_ 860 0;
+BA_ "GenMsgSendType" BO_ 852 0;
+BA_ "GenMsgSendType" BO_ 844 0;
+BA_ "GenMsgSendType" BO_ 836 0;
+BA_ "GenMsgSendType" BO_ 828 0;
+BA_ "GenMsgSendType" BO_ 820 0;
+BA_ "GenMsgSendType" BO_ 812 0;
+BA_ "GenMsgSendType" BO_ 804 0;
+BA_ "GenMsgSendType" BO_ 796 0;
+BA_ "GenMsgSendType" BO_ 788 0;
+BA_ "GenMsgSendType" BO_ 780 0;
+BA_ "GenMsgSendType" BO_ 772 0;
+BA_ "GenMsgSendType" BO_ 1184 0;
+BA_ "GenMsgSendType" BO_ 858 0;
+BA_ "GenMsgSendType" BO_ 857 0;
+BA_ "GenMsgSendType" BO_ 856 0;
+BA_ "GenMsgSendType" BO_ 850 0;
+BA_ "GenMsgSendType" BO_ 849 0;
+BA_ "GenMsgSendType" BO_ 848 0;
+BA_ "GenMsgSendType" BO_ 842 0;
+BA_ "GenMsgSendType" BO_ 841 0;
+BA_ "GenMsgSendType" BO_ 840 0;
+BA_ "GenMsgSendType" BO_ 834 0;
+BA_ "GenMsgSendType" BO_ 833 0;
+BA_ "GenMsgSendType" BO_ 832 0;
+BA_ "GenMsgSendType" BO_ 826 0;
+BA_ "GenMsgSendType" BO_ 825 0;
+BA_ "GenMsgSendType" BO_ 824 0;
+BA_ "GenMsgSendType" BO_ 818 0;
+BA_ "GenMsgSendType" BO_ 817 0;
+BA_ "GenMsgSendType" BO_ 816 0;
+BA_ "GenMsgSendType" BO_ 810 0;
+BA_ "GenMsgSendType" BO_ 809 0;
+BA_ "GenMsgSendType" BO_ 808 0;
+BA_ "GenMsgSendType" BO_ 802 0;
+BA_ "GenMsgSendType" BO_ 801 0;
+BA_ "GenMsgSendType" BO_ 800 0;
+BA_ "GenMsgSendType" BO_ 794 0;
+BA_ "GenMsgSendType" BO_ 793 0;
+BA_ "GenMsgSendType" BO_ 792 0;
+BA_ "GenMsgSendType" BO_ 786 0;
+BA_ "GenMsgSendType" BO_ 785 0;
+BA_ "GenMsgSendType" BO_ 784 0;
+BA_ "GenMsgSendType" BO_ 778 0;
+BA_ "GenMsgSendType" BO_ 777 0;
+BA_ "GenMsgSendType" BO_ 776 0;
+BA_ "GenMsgSendType" BO_ 770 0;
+BA_ "GenMsgSendType" BO_ 769 0;
+BA_ "GenMsgSendType" BO_ 768 0;
+BA_ "GenMsgSendType" BO_ 525 0;
+BA_ "GenMsgSendType" BO_ 524 0;
+BA_ "GenMsgSendType" BO_ 521 0;
+BA_ "GenMsgSendType" BO_ 520 0;
+BA_ "GenMsgSendType" BO_ 517 0;
+BA_ "GenMsgSendType" BO_ 516 0;
+BA_ "GenMsgSendType" BO_ 513 0;
+BA_ "GenMsgSendType" BO_ 512 0;
+VAL_ 548 RoadEdgeAvailability_FR 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 548 RoadEdgeType_FR 2 "Untraversable" 1 "Traversable" 0 "Invalid" ;
+VAL_ 548 RoadEdgeQuality_FR 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 544 RoadEdgeAvailability_FL 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 544 RoadEdgeType_FL 2 "Untraversable" 1 "Traversable" 0 "Invalid" ;
+VAL_ 544 RoadEdgeQuality_FL 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 672 FS_LowSun 3 "Reserved" 2 "Error" 1 "Normal" 0 "Invalid" ;
+VAL_ 672 FS_FullBlockage 3 "Reserved" 2 "Error" 1 "Normal" 0 "Invalid" ;
+VAL_ 1184 TimestampCameraID 9 "Camera_Right" 8 "Camera_Left" 7 "Camera_Rear_SVM" 6 "Camera_Rear_Right" 5 "Camera_Rear_Left" 4 "Camera_Rear" 3 "Camera_Front_SVM" 2 "Camera_Front_Narrow" 1 "Camera_Front" 0 "Camera_Unknown" ;
+VAL_ 856 ObjectLane_A_12 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 856 ObjectValidity_A_12 1 "Valid" 0 "Invalid" ;
+VAL_ 856 ObjectType_A_12 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 856 ObjectConfidence_A_12 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 848 ObjectLane_A_11 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 848 ObjectValidity_A_11 1 "Valid" 0 "Invalid" ;
+VAL_ 848 ObjectType_A_11 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 848 ObjectConfidence_A_11 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 840 ObjectLane_A_10 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 840 ObjectValidity_A_10 1 "Valid" 0 "Invalid" ;
+VAL_ 840 ObjectType_A_10 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 840 ObjectConfidence_A_10 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 832 ObjectLane_A_09 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 832 ObjectValidity_A_09 1 "Valid" 0 "Invalid" ;
+VAL_ 832 ObjectType_A_09 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 832 ObjectConfidence_A_09 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 824 ObjectLane_A_08 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 824 ObjectValidity_A_08 1 "Valid" 0 "Invalid" ;
+VAL_ 824 ObjectType_A_08 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 824 ObjectConfidence_A_08 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 816 ObjectLane_A_07 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 816 ObjectValidity_A_07 1 "Valid" 0 "Invalid" ;
+VAL_ 816 ObjectType_A_07 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 816 ObjectConfidence_A_07 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 808 ObjectLane_A_06 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 808 ObjectValidity_A_06 1 "Valid" 0 "Invalid" ;
+VAL_ 808 ObjectType_A_06 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 808 ObjectConfidence_A_06 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 800 ObjectLane_A_05 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 800 ObjectValidity_A_05 1 "Valid" 0 "Invalid" ;
+VAL_ 800 ObjectType_A_05 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 800 ObjectConfidence_A_05 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 792 ObjectLane_A_04 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 792 ObjectValidity_A_04 1 "Valid" 0 "Invalid" ;
+VAL_ 792 ObjectType_A_04 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 792 ObjectConfidence_A_04 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 784 ObjectLane_A_03 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 784 ObjectValidity_A_03 1 "Valid" 0 "Invalid" ;
+VAL_ 784 ObjectType_A_03 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 784 ObjectConfidence_A_03 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 776 ObjectLane_A_02 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 776 ObjectValidity_A_02 1 "Valid" 0 "Invalid" ;
+VAL_ 776 ObjectType_A_02 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 776 ObjectConfidence_A_02 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 768 ObjectLane_A_01 5 "ObjectInFurtherLanesRight" 4 "ObjectInNextLaneRight" 3 "ObjectInFurtherLanesLeft" 2 "ObjectInNextLaneLeft" 1 "ObjectInEGOLane" 0 "Unknown" ;
+VAL_ 768 ObjectValidity_A_01 1 "Valid" 0 "Invalid" ;
+VAL_ 768 ObjectType_A_01 9 "Animal" 8 "Emergency Vehicle" 7 "General Object" 6 "Motorcyclist" 5 "Bicyclist" 4 "Pedestrian" 3 "Truck" 2 "Car" 1 "Undefined Car" 0 "Invalid" ;
+VAL_ 768 ObjectConfidence_A_01 3 "High" 2 "Mid" 1 "Low" 0 "Invalid" ;
+VAL_ 524 LaneMarkAvailability_FRN 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 524 LaneMarkDecel_FRN 3 "Tidal" 2 "Fishbone" 1 "Normal" 0 "Invalid" ;
+VAL_ 524 LaneMarkCrossing_FRN 1 "Crossing" 0 "Not crossing" ;
+VAL_ 524 LaneMarkType_FRN 9 "Virtual" 8 "Botts'Dots" 7 "Double_Solid_Dashed" 6 "Double_Dashed_Solid" 5 "Double_Dashed_Dashed" 4 "Double_Solid_Solid" 3 "Undecided" 2 "Solid" 1 "Dashed" 0 "Invalid" ;
+VAL_ 524 LaneMarkQuality_FRN 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 524 LaneMarkColor_FRN 5 "Green" 4 "Red" 3 "Blue" 2 "Yellow" 1 "White" 0 "Invalid" ;
+VAL_ 520 LaneMarkAvailability_FLN 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 520 LaneMarkDecel_FLN 3 "Tidal" 2 "Fishbone" 1 "Normal" 0 "Invalid" ;
+VAL_ 520 LaneMarkCrossing_FLN 1 "Crossing" 0 "Not crossing" ;
+VAL_ 520 LaneMarkType_FLN 9 "Virtual" 8 "Botts'Dots" 7 "Double_Solid_Dashed" 6 "Double_Dashed_Solid" 5 "Double_Dashed_Dashed" 4 "Double_Solid_Solid" 3 "Undecided" 2 "Solid" 1 "Dashed" 0 "Invalid" ;
+VAL_ 520 LaneMarkQuality_FLN 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 520 LaneMarkColor_FLN 5 "Green" 4 "Red" 3 "Blue" 2 "Yellow" 1 "White" 0 "Invalid" ;
+VAL_ 516 LaneMarkAvailability_FR 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 516 LaneMarkDecel_FR 3 "Tidal" 2 "Fishbone" 1 "Normal" 0 "Invalid" ;
+VAL_ 516 LaneMarkCrossing_FR 1 "Crossing" 0 "Not crossing" ;
+VAL_ 516 LaneMarkType_FR 9 "Virtual" 8 "Botts'Dots" 7 "Double_Solid_Dashed" 6 "Double_Dashed_Solid" 5 "Double_Dashed_Dashed" 4 "Double_Solid_Solid" 3 "Undecided" 2 "Solid" 1 "Dashed" 0 "Invalid" ;
+VAL_ 516 LaneMarkQuality_FR 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 516 LaneMarkColor_FR 5 "Green" 4 "Red" 3 "Blue" 2 "Yellow" 1 "White" 0 "Invalid" ;
+VAL_ 512 LaneMarkAvailability_FL 2 "Predicted" 1 "Detected" 0 "Unavailable" ;
+VAL_ 512 LaneMarkDecel_FL 3 "Tidal" 2 "Fishbone" 1 "Normal" 0 "Invalid" ;
+VAL_ 512 LaneMarkCrossing_FL 1 "Crossing" 0 "Not crossing" ;
+VAL_ 512 LaneMarkType_FL 9 "Virtual" 8 "Botts'Dots" 7 "Double_Solid_Dashed" 6 "Double_Dashed_Solid" 5 "Double_Dashed_Dashed" 4 "Double_Solid_Solid" 3 "Undecided" 2 "Solid" 1 "Dashed" 0 "Invalid" ;
+VAL_ 512 LaneMarkQuality_FL 3 "High" 2 "Medium" 1 "Low" 0 "Unavailable" ;
+VAL_ 512 LaneMarkColor_FL 5 "Green" 4 "Red" 3 "Blue" 2 "Yellow" 1 "White" 0 "Invalid" ;
+

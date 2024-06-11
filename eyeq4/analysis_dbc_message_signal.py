@@ -1,3 +1,9 @@
+'''
+Author: lixialin lixialin@nullmax.ai
+Date: 2023-12-20 14:14:05
+LastEditors: lixialin lixialin@nullmax.ai
+LastEditTime: 2024-06-05 17:48:10
+'''
 from cantools import database
 import sys
 sys.path.append("..")
@@ -5,9 +11,10 @@ import utils
 import struct
 import collections
 import json
+import pandas as pd
 
 # Load the DBC file
-db = database.load_file('/media/lixialin/b4228689-0850-4159-ad34-8eaba32c783d1/02_tools/nm_tools/eyeq4/fov52_dbc/FCAN.dbc')
+db = database.load_file('/media/ubuntu/b4228689-0850-4159-ad34-8eaba32c783d/projects/nm_tools/eyeq4/BTL_cust_dbc/wbtl_v2.0.dbc')
 messages = db.messages
 messages.sort(key=lambda x: x.frame_id)
 messages_used = []
@@ -30,10 +37,27 @@ for message in db.messages:
     signal_content_dict[message.name] = signal_content
 
 
+# 导出json
+# json_data = {
+#     "message":message_content,
+#     "signal":signal_content_dict
+# }
+# json_path = '/home/ubuntu/Pictures/BTL.json'
+# utils.write_json_data(json_path,json_data)
 
-json_data = {
-    "message":message_content,
-    "signal":signal_content_dict
-}
-json_path = '/home/lixialin/Pictures/fov52-FCAN.json'
-utils.write_json_data(json_path,json_data)
+# 导出Excel
+data1 = message_content
+df = pd.DataFrame(data1)
+df.to_excel('{}/{}.xlsx'.format('/home/ubuntu/Pictures','BTL'),sheet_name='message_names')
+data2 = []
+for key,value in signal_content_dict.items():
+    message_name = key
+    for value_ in value:
+        item_name = value_[0]
+        enumerate_value = value_[1]
+        data2.append([message_name,item_name,enumerate_value])
+col_names = ['message_name','itme_name','enumerate_value']
+df2 = pd.DataFrame(data2)
+with pd.ExcelWriter('{}/{}.xlsx'.format('/home/ubuntu/Pictures','BTL'),mode='a',engine='openpyxl') as writer:
+    df2.to_excel(writer,sheet_name='details')
+
