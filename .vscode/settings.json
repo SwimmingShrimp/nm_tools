@@ -63,16 +63,16 @@
         // Author字段是文件的创建者 可以在specialOptions中更改特殊属性
         // 公司项目和个人项目可以配置不同的用户名与邮箱 搜索: gitconfig includeIf  比如: https://ayase.moe/2021/03/09/customized-git-config/
         // 自动提取当前git config中的: 用户名、邮箱
-        "Author": "git config user.name && git config user.email", // 同时获取用户名与邮箱
+        // "Author": "git config user.name && git config user.email", // 同时获取用户名与邮箱
         // "Author": "git config user.name", // 仅获取用户名
         // "Author": "git config user.email", // 仅获取邮箱
         // "Author": "OBKoro1", // 写死的固定值 不从git config中获取
-        "Date": "Do not edit", // 文件创建时间(不变)
+        // "Date": "Do not edit", // 文件创建时间(不变)
         // LastEditors、LastEditTime、FilePath将会自动更新 如果觉得时间更新的太频繁可以使用throttleTime(默认为1分钟)配置更改更新时间。
-        "LastEditors": "git config user.name && git config user.email", // 文件最后编辑者 与Author字段一致
+        // "LastEditors": "git config user.name && git config user.email", // 文件最后编辑者 与Author字段一致
         // 由于编辑文件就会变更最后编辑时间，多人协作中合并的时候会导致merge
         // 可以将时间颗粒度改为周、或者月，这样冲突就减少很多。搜索变更时间格式: dateFormat
-        "LastEditTime": "Do not edit", // 文件最后编辑时间
+        // "LastEditTime": "Do not edit", // 文件最后编辑时间
         // 输出相对路径，类似: /文件夹名称/src/index.js
         // "FilePath": "Do not edit", // 文件在项目中的相对路径 自动更新
         // 插件会自动将光标移动到Description选项中 方便输入 Description字段可以在specialOptions更改
