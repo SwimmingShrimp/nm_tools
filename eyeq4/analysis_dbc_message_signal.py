@@ -2,7 +2,7 @@
 Author: lixialin lixialin@nullmax.ai
 Date: 2023-12-20 14:14:05
 LastEditors: lixialin lixialin@nullmax.ai
-LastEditTime: 2024-06-05 17:48:10
+LastEditTime: 2024-09-10 14:35:27
 '''
 from cantools import database
 import sys
@@ -14,7 +14,7 @@ import json
 import pandas as pd
 
 # Load the DBC file
-db = database.load_file('/media/ubuntu/b4228689-0850-4159-ad34-8eaba32c783d/projects/nm_tools/eyeq4/BTL_cust_dbc/wbtl_v2.0.dbc')
+db = database.load_file('/home/ubuntu/Music/dbc/GWM_PCAN_V2.6.dbc')
 messages = db.messages
 messages.sort(key=lambda x: x.frame_id)
 messages_used = []
@@ -25,6 +25,8 @@ message_content = []
 signal_content_dict = {}
 for message in db.messages:
     message_content.append(message.name)
+    if message=='Last_Ignition_Cycle_Fault_Table':
+        continue
     signal_content = []
     for signal in message.signals:
         signal_name = signal.name

@@ -1,7 +1,0 @@
-cmake_minimum_required(VERSION 3.5)
-
-PROJECT(PARSE)
-
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-
-ADD_SUBDIRECTORY(src build)
